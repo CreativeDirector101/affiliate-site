@@ -1,4 +1,4 @@
-﻿# Private configuration
+# Private configuration
 config.toml
 .env
 .env.*
@@ -18,3 +18,5 @@ venv/
 *.log
 .DS_Store
 Thumbs.db
+run-daily.ps1
+logs/
