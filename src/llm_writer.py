@@ -111,9 +111,21 @@ def call_openrouter(cfg, keyword):
     req.add_header("Authorization", f"Bearer {key}")
     req.add_header("Content-Type", "application/json")
     req.add_header("HTTP-Referer", "https://localhost")
-    with urllib.request.urlopen(req, timeout=60) as r:
+    with urllib.request.urlopen(req, timeout=180) as r:
         data = json.loads(r.read().decode("utf-8"))
-    return data["choices"][0]["message"]["content"]
+    content = data["choices"][0]["message"]["content"]
+    # Models often wrap JSON in ``` fences or append a trailing char.
+    # Strip fences, then parse the FIRST JSON object (ignore trailing junk).
+    import re
+    content = content.strip()
+    if content.startswith("```"):
+        content = re.sub(r"^```[a-zA-Z]*\n?", "", content)
+        if content.endswith("```"):
+            content = content[:-3]
+        content = content.strip()
+    decoder = json.JSONDecoder()
+    obj, _ = decoder.raw_decode(content)  # tolerates trailing data
+    return obj
 
 def validate(art, slug, keyword):
     if not isinstance(art, dict):
@@ -146,9 +158,8 @@ def generate_batch(cfg, art_dir, count=3):
     max_per_day = int(cfg.get("llm", {}).get("max_articles_per_day", 10))
     for slug, kw in keywords[:max_per_day]:
         try:
-            raw = call_openrouter(cfg, kw)
-            art = json.loads(raw)
-            art = validate(art, slug, kw)
+            raw = call_openrouter(cfg, kw)   # returns a dict now
+            art = validate(raw, slug, kw)
             if not art:
                 print(f"[llm] rejected low-quality output for '{kw}' (retrying once)")
                 continue
