@@ -1,0 +1,52 @@
+{
+  "slug": "best-pet-water-fountain-plastic-free",
+  "keyword": "best plastic free pet water fountain ceramic",
+  "title": "Best Plastic-Free Pet Water Fountain (Ceramic & Steel)",
+  "meta": "Ceramic and stainless fountains for cats prone to chin acne or plastic sensitivity.",
+  "intro": "Plastic bowls can harbor bacteria in micro-scratches and trigger feline chin acne. Ceramic or steel solves it.",
+  "sections": [
+    {
+      "h2": "Ceramic pros",
+      "body": "Heavy (won't tip), non-porous, stylish; cons: breakable if dropped."
+    },
+    {
+      "h2": "Steel pros",
+      "body": "Durable, dishwasher-safe, hygienic; cons: can be noisy without a pad."
+    },
+    {
+      "h2": "Cleaning",
+      "body": "Both still need regular washing; neither is maintenance-free."
+    }
+  ],
+  "products": [
+    {
+      "name": "Ceramic Pet Fountain",
+      "asin_query": "ceramic pet water fountain",
+      "price": "from $55",
+      "blurb": "Non-porous, stable."
+    },
+    {
+      "name": "Stainless Pet Fountain",
+      "asin_query": "stainless steel pet fountain",
+      "price": "from $45",
+      "blurb": "Dishwasher-safe."
+    },
+    {
+      "name": "Ceramic Cat Fountain 2L",
+      "asin_query": "ceramic cat fountain 2l",
+      "price": "from $60",
+      "blurb": "Chin-acne friendly."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Does ceramic stop chin acne?",
+      "a": "Often helps by removing plastic contact."
+    },
+    {
+      "q": "Is ceramic worth it?",
+      "a": "If your cat gets chin bumps from plastic, yes."
+    }
+  ],
+  "source": "seed"
+}

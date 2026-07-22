@@ -1,0 +1,52 @@
+{
+  "slug": "automatic-cat-feeder-wet-food",
+  "keyword": "automatic cat feeder for wet food refrigerated",
+  "title": "Automatic Cat Feeder for Wet Food (Refrigerated Options)",
+  "meta": "Feeders that keep wet food cold and serve it on a schedule — for cats on a wet-food diet.",
+  "intro": "Wet food spoils fast, so a refrigerated feeder is the only safe auto-option. They're pricier but solve a real problem.",
+  "sections": [
+    {
+      "h2": "Why refrigeration",
+      "body": "Unrefrigerated wet food grows bacteria in hours. A cooled compartment is essential."
+    },
+    {
+      "h2": "Portion cups",
+      "body": "Most use pre-filled cups on a timer; you load several days ahead."
+    },
+    {
+      "h2": "Power reliance",
+      "body": "These need constant power; a backup matters more than with dry feeders."
+    }
+  ],
+  "products": [
+    {
+      "name": "Refrigerated Wet Food Cat Feeder",
+      "asin_query": "refrigerated automatic cat feeder wet food",
+      "price": "from $150",
+      "blurb": "Keeps food cold, serves on schedule."
+    },
+    {
+      "name": "Timed Wet Food Feeder 3 Meal",
+      "asin_query": "3 meal wet food cat feeder timer",
+      "price": "from $60",
+      "blurb": "Ice-pack cooled, shorter window."
+    },
+    {
+      "name": "Cat Wet Food Feeder Tray",
+      "asin_query": "wet food cat feeder tray timer",
+      "price": "from $45",
+      "blurb": "Basic timed tray."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How long does food stay safe?",
+      "a": "Refrigerated units: days. Ice-pack trays: ~4-8h — not overnight in heat."
+    },
+    {
+      "q": "Can I use pate and chunks?",
+      "a": "Both work if the cup fits; chunkier needs a wider opening."
+    }
+  ],
+  "source": "seed"
+}

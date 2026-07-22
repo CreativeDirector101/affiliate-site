@@ -1,0 +1,52 @@
+{
+  "slug": "pet-air-purifier-for-litter-box-odor",
+  "keyword": "best air purifier for litter box odor",
+  "title": "Best Air Purifier for Litter Box Odor (Cat-Toilet Smell Control)",
+  "meta": "Purifiers placed by the litter box that actually cut ammonia and odor.",
+  "intro": "Litter-box odor is mostly ammonia from urine. A purifier with a real carbon stage near the box helps; placement beats specs.",
+  "sections": [
+    {
+      "h2": "Carbon is key",
+      "body": "Only activated-carbon filters trap odor; HEPA alone catches particles, not smell."
+    },
+    {
+      "h2": "Placement",
+      "body": "Put the purifier a foot or two from the box, not across the room."
+    },
+    {
+      "h2": "CADR for small space",
+      "body": "You don't need a huge unit; match CADR to the box area."
+    }
+  ],
+  "products": [
+    {
+      "name": "Pet Odor Air Purifier Carbon",
+      "asin_query": "air purifier litter box odor carbon",
+      "price": "from $70",
+      "blurb": "Real carbon stage."
+    },
+    {
+      "name": "Small Room Pet Purifier",
+      "asin_query": "small room pet air purifier",
+      "price": "from $55",
+      "blurb": "Box-area coverage."
+    },
+    {
+      "name": "HEPA + Carbon Cat Purifier",
+      "asin_query": "hepa carbon cat odor purifier",
+      "price": "from $80",
+      "blurb": "Dual filtration."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Will it remove all smell?",
+      "a": "It cuts it sharply; scooping daily still matters."
+    },
+    {
+      "q": "How often replace carbon?",
+      "a": "Every 3-6 months with a cat; sooner in multi-cat homes."
+    }
+  ],
+  "source": "seed"
+}

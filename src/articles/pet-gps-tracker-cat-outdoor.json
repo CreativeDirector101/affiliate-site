@@ -1,0 +1,52 @@
+{
+  "slug": "pet-gps-tracker-cat-outdoor",
+  "keyword": "best gps tracker for outdoor cat",
+  "title": "Best GPS Tracker for Outdoor Cats (Lightweight & Weatherproof)",
+  "meta": "Trackers built for roaming outdoor cats — light, weatherproof, with enough battery for a night out.",
+  "intro": "Outdoor cats roam for hours. The tracker must be light enough not to annoy them and sealed against weather.",
+  "sections": [
+    {
+      "h2": "Weight",
+      "body": "Keep under ~20g so the cat ignores it."
+    },
+    {
+      "h2": "Weatherproof",
+      "body": "IP67 keeps out rain; outdoor cats don't come in for storms."
+    },
+    {
+      "h2": "Battery for overnights",
+      "body": "Look for 2-3 days so a late return doesn't mean a dead tag."
+    }
+  ],
+  "products": [
+    {
+      "name": "Outdoor Cat GPS Tracker",
+      "asin_query": "gps tracker outdoor cat lightweight",
+      "price": "from $70",
+      "blurb": "Light + waterproof."
+    },
+    {
+      "name": "Cat Tracker Collar Attachment",
+      "asin_query": "cat gps collar attachment",
+      "price": "from $18",
+      "blurb": "Secure mount."
+    },
+    {
+      "name": "Cat Breakaway Collar GPS",
+      "asin_query": "breakaway cat collar gps",
+      "price": "from $22",
+      "blurb": "Safe if snagged."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Should the collar break away?",
+      "a": "Yes — breakaway prevents snag injuries outdoors."
+    },
+    {
+      "q": "Do they work in trees?",
+      "a": "Coverage drops under dense canopy; expect last-known-point."
+    }
+  ],
+  "source": "seed"
+}

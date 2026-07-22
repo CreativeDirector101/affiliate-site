@@ -1,0 +1,52 @@
+{
+  "slug": "cheap-pet-camera-under-30",
+  "keyword": "best pet camera under 30 dollars",
+  "title": "Best Pet Camera Under $30 (Budget Picks That Work)",
+  "meta": "Functional, affordable pet cameras for tight budgets — what you get and what you give up.",
+  "intro": "You can watch your pet for under $30, but expect trade-offs in app reliability and video clarity. We found the ones that don't frustrate.",
+  "sections": [
+    {
+      "h2": "What you sacrifice",
+      "body": "Fewer features, sometimes weaker night vision, and apps with more ads or lag."
+    },
+    {
+      "h2": "Still useful for",
+      "body": "Quick check-ins and basic motion alerts — fine if you don't need treat tossing."
+    },
+    {
+      "h2": "Avoid no-name junk",
+      "body": "Stick to recognizable brands with recent reviews to dodge dead apps."
+    }
+  ],
+  "products": [
+    {
+      "name": "Budget 1080p Pet Camera",
+      "asin_query": "pet camera under 30 dollars 1080p",
+      "price": "from $25",
+      "blurb": "Basic but reliable."
+    },
+    {
+      "name": "Mini Pet Camera Cheap",
+      "asin_query": "cheap mini pet camera",
+      "price": "from $20",
+      "blurb": "Discreet check-ins."
+    },
+    {
+      "name": "2-Pack Budget Pet Cams",
+      "asin_query": "2 pack pet camera budget",
+      "price": "from $45",
+      "blurb": "Cover two rooms cheaply."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Are cheap cameras secure?",
+      "a": "Reputable budget brands are fine; avoid unknown apps requesting excess permissions."
+    },
+    {
+      "q": "Do they need a subscription?",
+      "a": "Most budget cams work free for live view."
+    }
+  ],
+  "source": "seed"
+}

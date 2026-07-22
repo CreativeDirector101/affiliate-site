@@ -1,0 +1,52 @@
+{
+  "slug": "dog-camera-treat-dispenser-outdoor",
+  "keyword": "outdoor pet camera treat dispenser weatherproof",
+  "title": "Outdoor Pet Camera With Treat Dispenser (Weatherproof)",
+  "meta": "Weatherproof treat cameras for patios, kennels and yards.",
+  "intro": "An outdoor treat camera needs an IP-rated housing and weatherproofing — most indoor cams will die outside in a season.",
+  "sections": [
+    {
+      "h2": "IP rating",
+      "body": "IP65+ for rain exposure; sheltered porches can use less."
+    },
+    {
+      "h2": "Power",
+      "body": "Outdoor units need a safe outdoor outlet or solar; plan the run."
+    },
+    {
+      "h2": "Wi-Fi outside",
+      "body": "A mesh node may be needed to reach the yard."
+    }
+  ],
+  "products": [
+    {
+      "name": "Weatherproof Pet Camera",
+      "asin_query": "outdoor weatherproof pet camera",
+      "price": "from $60",
+      "blurb": "IP65 housing."
+    },
+    {
+      "name": "Outdoor Treat Camera",
+      "asin_query": "outdoor pet camera treat dispenser",
+      "price": "from $90",
+      "blurb": "Dispenses outside."
+    },
+    {
+      "name": "Outdoor Wi-Fi Extender",
+      "asin_query": "outdoor wifi extender pet camera",
+      "price": "from $30",
+      "blurb": "Reach the yard."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Can I leave it out all winter?",
+      "a": "Only IP65+ rated and within temp spec."
+    },
+    {
+      "q": "Will treats survive humidity?",
+      "a": "Use sealed treats; add a desiccant pack."
+    }
+  ],
+  "source": "seed"
+}

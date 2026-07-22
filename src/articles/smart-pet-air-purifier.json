@@ -1,0 +1,52 @@
+{
+  "slug": "smart-pet-air-purifier",
+  "keyword": "best air purifier for pet hair and odor",
+  "title": "Best Air Purifier for Pet Hair & Odor (2026)",
+  "meta": "Air purifiers for pet households compared on HEPA filtration, odor removal, noise and room size.",
+  "intro": "Pets mean dander, hair and the occasional accident smell. A good purifier with a true HEPA filter and an odor stage keeps the air livable.",
+  "sections": [
+    {
+      "h2": "True HEPA + carbon, not 'HEPA-like'",
+      "body": "Insist on a true HEPA (captures 99.97% of 0.3 micron particles) plus an activated carbon layer for odor. 'HEPA-type' is marketing, not a standard."
+    },
+    {
+      "h2": "Match CADR to room size",
+      "body": "CADR (clean air delivery rate) must suit your room. Too small and it just circulates. Check the sq-ft rating before buying."
+    },
+    {
+      "h2": "Noise & sleep mode",
+      "body": "A purifier in the bedroom needs a quiet sleep mode. Check dB at low speed, not just max."
+    }
+  ],
+  "products": [
+    {
+      "name": "True HEPA Pet Air Purifier with Carbon",
+      "asin_query": "true hepa pet air purifier carbon",
+      "price": "from $90",
+      "blurb": "Real HEPA + odor carbon; quiet sleep mode."
+    },
+    {
+      "name": "Large Room Pet Air Purifier",
+      "asin_query": "large room pet air purifier",
+      "price": "from $140",
+      "blurb": "For open-plan homes."
+    },
+    {
+      "name": "Compact Pet Odor Air Purifier",
+      "asin_query": "compact pet odor air purifier",
+      "price": "from $60",
+      "blurb": "Bedroom/small room."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Do they remove pet odor?",
+      "a": "Only models with an activated carbon stage help with odor; HEPA alone captures particles, not smells."
+    },
+    {
+      "q": "How often replace filters?",
+      "a": "Carbon every 3-6 months, HEPA every 6-12, depending on pet load."
+    }
+  ],
+  "source": "seed"
+}

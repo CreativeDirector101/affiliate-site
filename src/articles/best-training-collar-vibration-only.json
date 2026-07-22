@@ -1,0 +1,52 @@
+{
+  "slug": "best-training-collar-vibration-only",
+  "keyword": "best vibration only dog training collar no shock",
+  "title": "Best Vibration-Only Dog Training Collar (No Shock)",
+  "meta": "Humane vibration and tone collars for training without static correction.",
+  "intro": "If you'd rather not use static shock, vibration/tone collars give a cue your dog can feel and hear — no pain.",
+  "sections": [
+    {
+      "h2": "Vibration vs shock",
+      "body": "Vibration is a tactile tap; tone is audible. Both are aversive-light cues, not punishment."
+    },
+    {
+      "h2": "Range",
+      "body": "Match the remote range to your use — yard vs. field."
+    },
+    {
+      "h2": "Training first",
+      "body": "A collar is a cue, not a fix; pair with reward-based training."
+    }
+  ],
+  "products": [
+    {
+      "name": "Vibration Only Dog Collar",
+      "asin_query": "vibration only dog training collar",
+      "price": "from $30",
+      "blurb": "No static shock."
+    },
+    {
+      "name": "Tone + Vibration Collar",
+      "asin_query": "tone vibration dog collar",
+      "price": "from $35",
+      "blurb": "Audible + tactile."
+    },
+    {
+      "name": "Long-Range Vibration Collar",
+      "asin_query": "long range vibration dog collar",
+      "price": "from $55",
+      "blurb": "Field use."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is vibration harmful?",
+      "a": "No — it's a gentle tap, not a shock."
+    },
+    {
+      "q": "Does it work for barking?",
+      "a": "Some have bark modes; consistency with training matters most."
+    }
+  ],
+  "source": "seed"
+}

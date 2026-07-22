@@ -1,0 +1,52 @@
+{
+  "slug": "pet-water-fountain-buyers-guide",
+  "keyword": "best pet water fountain stainless steel",
+  "title": "Best Pet Water Fountain (Stainless Steel) — Keep Your Pet Hydrated",
+  "meta": "Stainless steel pet fountains compared on flow type, filter cost, noise and ease of cleaning.",
+  "intro": "Cats and dogs drink more from moving water. A stainless steel fountain is healthier (less bacterial film than plastic) and easier to keep clean. Here's how to pick one.",
+  "sections": [
+    {
+      "h2": "Stainless over plastic, always",
+      "body": "Plastic fountains scratch and harbor biofilm even after washing. Stainless or ceramic stay cleaner and smell better long-term."
+    },
+    {
+      "h2": "Flow type changes drinking",
+      "body": "Some pets prefer a gentle stream, others a bubbling well. If your pet ignores the fountain, try a different flow style before giving up."
+    },
+    {
+      "h2": "Filter cost adds up",
+      "body": "Budget for replacement filters every 2-4 weeks. A cheap fountain with expensive proprietary filters can cost more per year than a pricier one with standard filters."
+    }
+  ],
+  "products": [
+    {
+      "name": "Stainless Steel Pet Water Fountain 2L",
+      "asin_query": "stainless steel pet water fountain 2l",
+      "price": "from $35",
+      "blurb": "Quiet, easy to disassemble, standard filters."
+    },
+    {
+      "name": "Large Stainless Cat Fountain 3L",
+      "asin_query": "large stainless cat fountain 3l",
+      "price": "from $45",
+      "blurb": "Good for multi-cat homes."
+    },
+    {
+      "name": "Wireless Pet Water Fountain",
+      "asin_query": "wireless pet water fountain",
+      "price": "from $50",
+      "blurb": "No cord trip hazard; rechargeable."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How often should I clean it?",
+      "a": "Rinse the bowl daily and do a full wash with filter change every 2-4 weeks."
+    },
+    {
+      "q": "Why won't my cat use it?",
+      "a": "Try a different flow setting, place it away from food, and ensure the motor isn't too loud."
+    }
+  ],
+  "source": "seed"
+}

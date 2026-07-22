@@ -1,0 +1,52 @@
+{
+  "slug": "best-pet-door-for-wall",
+  "keyword": "best pet door for wall installation",
+  "title": "Best Pet Door for Wall Installation (Tunnel Kits & Sizing)",
+  "meta": "Wall-mounted pet doors with tunnel kits for homes without a suitable door.",
+  "intro": "A wall install needs a tunnel to bridge the thickness. We cover sizing, tunnel kits and weather sealing.",
+  "sections": [
+    {
+      "h2": "Tunnel length",
+      "body": "Measure wall thickness; buy a tunnel kit that matches or stacks."
+    },
+    {
+      "h2": "Insulation",
+      "body": "Walls lose heat — choose a double-flap model to cut drafts."
+    },
+    {
+      "h2": "Cutting the wall",
+      "body": "Exterior walls may have wiring/plumbing — inspect before cutting or hire a pro."
+    }
+  ],
+  "products": [
+    {
+      "name": "Wall Pet Door Tunnel Kit",
+      "asin_query": "pet door wall tunnel kit",
+      "price": "from $40",
+      "blurb": "Bridges wall thickness."
+    },
+    {
+      "name": "Double-Flap Wall Pet Door",
+      "asin_query": "insulated wall pet door double flap",
+      "price": "from $130",
+      "blurb": "Better weather seal."
+    },
+    {
+      "name": "Microchip Wall Pet Door",
+      "asin_query": "microchip wall pet door",
+      "price": "from $160",
+      "blurb": "Reads your pet's chip."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Can I install in a brick wall?",
+      "a": "Yes with masonry bits; consider a pro for load-bearing walls."
+    },
+    {
+      "q": "Will it leak?",
+      "a": "Seal the frame with exterior caulk; double flaps reduce drafts."
+    }
+  ],
+  "source": "seed"
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "best-wifi-pet-camera-no-subscription",
+  "keyword": "best wifi pet camera no subscription",
+  "title": "Best Wi-Fi Pet Camera With No Subscription (Local-Only Picks)",
+  "meta": "Pet cameras that work without a monthly cloud fee — local SD storage and free apps that don't trap you in a subscription.",
+  "intro": "Most pet cameras nickel-and-dime you with cloud subscriptions. These models record to a local SD card or your NAS and never bill you again.",
+  "sections": [
+    {
+      "h2": "Why go subscription-free",
+      "body": "The 'free' cloud tiers expire or cap clips to a few seconds. Local storage gives you full clips forever for the price of a microSD card."
+    },
+    {
+      "h2": "What you lose",
+      "body": "You trade off off-site backup — if a burglar steals the camera, the footage goes with it. For pet-checking that's fine."
+    },
+    {
+      "h2": "App quality still matters",
+      "body": "A free app can still be buggy. Read recent reviews for the specific model's app stability before buying."
+    }
+  ],
+  "products": [
+    {
+      "name": "Local-SD Pet Camera 1080p",
+      "asin_query": "wifi pet camera sd card no subscription",
+      "price": "from $35",
+      "blurb": "Records to microSD; no cloud fee."
+    },
+    {
+      "name": "Pet Camera with NAS Support",
+      "asin_query": "pet camera onvif nas local storage",
+      "price": "from $55",
+      "blurb": "Streams to your own network storage."
+    },
+    {
+      "name": "Battery Pet Camera Local",
+      "asin_query": "battery pet camera local storage no subscription",
+      "price": "from $60",
+      "blurb": "Wire-free, records locally."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Do local cameras send alerts?",
+      "a": "Yes — motion/person alerts over the app are usually free; only cloud clip history costs."
+    },
+    {
+      "q": "Is footage secure?",
+      "a": "Local-only means it never leaves your network. Strongest privacy option."
+    }
+  ],
+  "source": "seed"
+}

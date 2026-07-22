@@ -1,0 +1,52 @@
+{
+  "slug": "smart-bird-feeder-camera",
+  "keyword": "best smart bird feeder camera with app",
+  "title": "Best Smart Bird Feeder Camera (Watch & ID Backyard Birds)",
+  "meta": "Bird feeders with built-in cameras and apps that identify species — a fast-growing pet-adjacent niche.",
+  "intro": "Smart bird feeders pair a camera with species-ID software so you can watch and log backyard birds from your phone.",
+  "sections": [
+    {
+      "h2": "Species ID accuracy",
+      "body": "ID is decent for common birds, shaky for similar species; treat as a fun aid, not a field guide."
+    },
+    {
+      "h2": "Power",
+      "body": "Most are solar-assisted or battery; placement affects charge."
+    },
+    {
+      "h2": "Wi-Fi range",
+      "body": "The feeder sits outside — check your signal reaches it."
+    }
+  ],
+  "products": [
+    {
+      "name": "Smart Bird Feeder Camera",
+      "asin_query": "smart bird feeder camera app",
+      "price": "from $120",
+      "blurb": "Camera + species ID."
+    },
+    {
+      "name": "Solar Bird Feeder Camera",
+      "asin_query": "solar bird feeder camera",
+      "price": "from $140",
+      "blurb": "Self-charging."
+    },
+    {
+      "name": "Bird Feeder Camera Mount",
+      "asin_query": "bird feeder camera mount",
+      "price": "from $15",
+      "blurb": "Secure install."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Does the ID need a subscription?",
+      "a": "Some lock HD/ID behind a plan; check before buying."
+    },
+    {
+      "q": "Will it survive weather?",
+      "a": "Look for IP65+ and a covered seed bay."
+    }
+  ],
+  "source": "seed"
+}

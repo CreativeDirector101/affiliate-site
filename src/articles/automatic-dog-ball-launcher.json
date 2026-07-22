@@ -1,0 +1,52 @@
+{
+  "slug": "automatic-dog-ball-launcher",
+  "keyword": "automatic dog ball launcher indoor",
+  "title": "Automatic Dog Ball Launcher: Tire Out Your Dog Hands-Free",
+  "meta": "Automatic ball launchers compared on safety, distance settings, size and indoor use.",
+  "intro": "An automatic launcher gives high-energy dogs a workout when you're busy. The priority is safety and the right ball size for your dog's mouth.",
+  "sections": [
+    {
+      "h2": "Ball size = safety",
+      "body": "Only use the launcher's matched balls. A too-small ball is a choking risk for big dogs; a too-big one jams the mechanism."
+    },
+    {
+      "h2": "Distance & indoor use",
+      "body": "Look for multiple distance settings; the shortest should be safe indoors. Some have a 'scan' safety pause if your dog stands in front."
+    },
+    {
+      "h2": "Power options",
+      "body": "Battery for yard use, plug-in for indoor. Check which your layout needs."
+    }
+  ],
+  "products": [
+    {
+      "name": "Automatic Dog Ball Launcher (Adjustable)",
+      "asin_query": "automatic dog ball launcher adjustable",
+      "price": "from $160",
+      "blurb": "Multiple distances; safety pause."
+    },
+    {
+      "name": "Indoor Automatic Ball Launcher",
+      "asin_query": "indoor automatic dog ball launcher",
+      "price": "from $130",
+      "blurb": "Short-distance safe indoor mode."
+    },
+    {
+      "name": "Replacement Safe Balls (Pack)",
+      "asin_query": "dog launcher replacement balls",
+      "price": "from $15",
+      "blurb": "Use only matched balls."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is it safe for puppies?",
+      "a": "Better for adult dogs that know 'fetch'. Supervise initially and use the correct ball size."
+    },
+    {
+      "q": "Will it work with any ball?",
+      "a": "No — use only the manufacturer's balls to avoid jams and choking."
+    }
+  ],
+  "source": "seed"
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "automatic-dog-feeder-large-breed",
+  "keyword": "automatic dog feeder for large breed 10l",
+  "title": "Automatic Dog Feeder for Large Breeds (10L+ Capacity)",
+  "meta": "High-capacity automatic feeders that handle big dogs and multi-day trips.",
+  "intro": "Big dogs eat a lot. A 10L+ hopper means fewer refills and peace of mind on a weekend away.",
+  "sections": [
+    {
+      "h2": "Capacity math",
+      "body": "A 40lb dog eating 2 cups/day needs ~6L/week. Size the hopper to your trip length."
+    },
+    {
+      "h2": "Portion accuracy at scale",
+      "body": "Larger kibble dispenses less precisely; weigh a few cycles."
+    },
+    {
+      "h2": "Stability",
+      "body": "A top-heavy feeder gets bumped by a big dog — look for a wide base."
+    }
+  ],
+  "products": [
+    {
+      "name": "10L Automatic Dog Feeder",
+      "asin_query": "large dog feeder 10l automatic",
+      "price": "from $90",
+      "blurb": "Multi-day capacity."
+    },
+    {
+      "name": "12L Wi-Fi Dog Feeder",
+      "asin_query": "12l wifi dog feeder large breed",
+      "price": "from $110",
+      "blurb": "App scheduling, big hopper."
+    },
+    {
+      "name": "Heavy-Base Pet Feeder",
+      "asin_query": "stable large dog feeder base",
+      "price": "from $85",
+      "blurb": "Won't tip when bumped."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Can it feed wet food?",
+      "a": "No — dry kibble only for hopper feeders."
+    },
+    {
+      "q": "What if power fails?",
+      "a": "Backup-battery models keep the schedule; others default to a fail-open or skip."
+    }
+  ],
+  "source": "seed"
+}

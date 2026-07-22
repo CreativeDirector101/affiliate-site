@@ -1,0 +1,52 @@
+{
+  "slug": "automatic-pet-feeder-wet-and-dry",
+  "keyword": "automatic pet feeder wet and dry food",
+  "title": "Automatic Pet Feeder for Wet AND Dry Food",
+  "meta": "Feeders that handle both food types — a harder problem than it sounds.",
+  "intro": "Most auto-feeders do dry only. Combining wet requires a cooled compartment plus a dry hopper; few do both well.",
+  "sections": [
+    {
+      "h2": "Two compartments",
+      "body": "Look for a refrigerated wet bay + a dry hopper if you feed both."
+    },
+    {
+      "h2": "Cost",
+      "body": "Dual feeders cost more; a single wet-only + manual dry may be cheaper."
+    },
+    {
+      "h2": "Scheduling",
+      "body": "Ensure both bays run independent schedules."
+    }
+  ],
+  "products": [
+    {
+      "name": "Wet + Dry Pet Feeder",
+      "asin_query": "automatic pet feeder wet and dry",
+      "price": "from $170",
+      "blurb": "Dual compartments."
+    },
+    {
+      "name": "Refrigerated Feeder + Dry Hopper",
+      "asin_query": "refrigerated feeder dry hopper combo",
+      "price": "from $190",
+      "blurb": "Full solution."
+    },
+    {
+      "name": "Split Meal Pet Feeder",
+      "asin_query": "split meal wet dry pet feeder",
+      "price": "from $140",
+      "blurb": "Separate bays."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Why so few do both?",
+      "a": "Wet needs cooling, dry needs a hopper; combining is engineering-heavy."
+    },
+    {
+      "q": "Is manual dry + auto wet OK?",
+      "a": "Often simpler and cheaper."
+    }
+  ],
+  "source": "seed"
+}

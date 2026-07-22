@@ -1,0 +1,52 @@
+{
+  "slug": "pet-camera-treat-dispenser-buyers-guide",
+  "keyword": "pet camera with treat dispenser buy guide",
+  "title": "Pet Camera With Treat Dispenser: Buyer's Guide & Top Picks",
+  "meta": "How to choose a treat-dispensing pet camera: treat size, toss distance, app latency and reliability.",
+  "intro": "Treat cameras keep pets engaged while you're away and let you reward good behavior remotely. The wrong one jams constantly. Here's the buying framework.",
+  "sections": [
+    {
+      "h2": "Treat compatibility is the #1 complaint",
+      "body": "Most jam on treats larger than a pea or on soft/odd shapes. Stick to small, round, dry treats and you'll avoid 90% of support tickets."
+    },
+    {
+      "h2": "Toss distance & control",
+      "body": "Adjustable distance matters if the camera sits on a shelf vs. the floor. Some apps let you choose a short or long toss."
+    },
+    {
+      "h2": "App latency",
+      "body": "If the 'treat' fires 3 seconds after you tap, your pet won't connect the action to the reward. Lower lag = better training."
+    }
+  ],
+  "products": [
+    {
+      "name": "HD Pet Camera with Adjustable Treat Toss",
+      "asin_query": "hd pet camera treat toss",
+      "price": "from $65",
+      "blurb": "Adjustable distance; reliable app."
+    },
+    {
+      "name": "Two-Way Audio Treat Camera",
+      "asin_query": "two way audio pet treat camera",
+      "price": "from $55",
+      "blurb": "Good budget pick."
+    },
+    {
+      "name": "360 Pet Camera with Treat Dispenser",
+      "asin_query": "360 pet camera treat dispenser",
+      "price": "from $80",
+      "blurb": "Covers the room."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What treats work best?",
+      "a": "Small, dry, round treats under 10mm. Avoid soft or irregular shapes."
+    },
+    {
+      "q": "Can multiple pets use it?",
+      "a": "Yes, but the toss is indiscriminate — all nearby pets get the reward."
+    }
+  ],
+  "source": "seed"
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "pet-baby-monitor-alternative",
+  "keyword": "use baby monitor as pet camera",
+  "title": "Using a Baby Monitor as a Pet Camera (Cheap Alternative)",
+  "meta": "How a spare baby monitor can double as a pet cam — pros, cons and privacy.",
+  "intro": "Baby monitors are a low-cost way to watch a pet, often with no subscription and strong night vision. They trade pet-specific apps for simplicity.",
+  "sections": [
+    {
+      "h2": "Pros",
+      "body": "No monthly fee, great night vision, often two-way audio, local or FHSS (private) signals."
+    },
+    {
+      "h2": "Cons",
+      "body": "No pet alerts, no treat toss, limited app features, range limits."
+    },
+    {
+      "h2": "Privacy",
+      "body": "FHSS monitors don't go online — strongest privacy; Wi-Fi baby cams do."
+    }
+  ],
+  "products": [
+    {
+      "name": "Baby Monitor with Camera",
+      "asin_query": "baby monitor camera two way audio",
+      "price": "from $50",
+      "blurb": "Cheap pet check-in."
+    },
+    {
+      "name": "Long-Range Baby Monitor",
+      "asin_query": "long range baby monitor pet",
+      "price": "from $80",
+      "blurb": "Whole-house range."
+    },
+    {
+      "name": "Wi-Fi Baby Cam",
+      "asin_query": "wifi baby monitor camera",
+      "price": "from $60",
+      "blurb": "App access anywhere."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is a baby monitor better than a pet cam?",
+      "a": "For simple watching, yes and cheaper; for features, no."
+    },
+    {
+      "q": "Are they secure?",
+      "a": "FHSS models aren't online; treat Wi-Fi ones like any cam."
+    }
+  ],
+  "source": "seed"
+}

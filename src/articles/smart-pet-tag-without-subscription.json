@@ -1,0 +1,52 @@
+{
+  "slug": "smart-pet-tag-without-subscription",
+  "keyword": "best smart pet tag no subscription qr",
+  "title": "Best Smart Pet Tag With No Subscription (QR & Bluetooth)",
+  "meta": "Lost-pet tags that reunite you with your dog without a monthly fee.",
+  "intro": "A smart tag with a QR code or Bluetooth beacon helps strangers return your pet — no cellular plan required.",
+  "sections": [
+    {
+      "h2": "QR tags",
+      "body": "Laser-etched QR codes link to your contact info; free, no battery, works worldwide."
+    },
+    {
+      "h2": "Bluetooth beacons",
+      "body": "Short-range ping from your phone; great for 'where's the cat in the house' not lost-outside."
+    },
+    {
+      "h2": "No subscription",
+      "body": "Avoid tags that lock features behind a yearly fee for basic reunion."
+    }
+  ],
+  "products": [
+    {
+      "name": "QR Pet ID Tag",
+      "asin_query": "qr code pet id tag no subscription",
+      "price": "from $10",
+      "blurb": "Free scan-to-contact."
+    },
+    {
+      "name": "Bluetooth Pet Finder Tag",
+      "asin_query": "bluetooth pet tag finder",
+      "price": "from $25",
+      "blurb": "Ping from phone short-range."
+    },
+    {
+      "name": "Metal QR Collar Plate",
+      "asin_query": "metal qr dog collar plate",
+      "price": "from $12",
+      "blurb": "Durable etched plate."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Do QR tags need the finder to install an app?",
+      "a": "No — any camera scans the QR to a web page."
+    },
+    {
+      "q": "Are Bluetooth tags good for lost pets?",
+      "a": "Only short-range; pair with a QR for outside loss."
+    }
+  ],
+  "source": "seed"
+}

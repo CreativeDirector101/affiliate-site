@@ -1,0 +1,52 @@
+{
+  "slug": "pet-camera-with-privacy-shutter",
+  "keyword": "pet camera with physical privacy shutter",
+  "title": "Pet Camera With a Physical Privacy Shutter (Camera-Off Trust)",
+  "meta": "Cameras with a manual/auto lens cover so you control when it's watching.",
+  "intro": "A physical shutter lets you close the lens when you're home — real privacy, not just software 'off'.",
+  "sections": [
+    {
+      "h2": "Physical > software",
+      "body": "A mechanical cover can't be hacked open; software off can glitch."
+    },
+    {
+      "h2": "Auto-schedule",
+      "body": "Some close on a schedule (e.g., when you're home) automatically."
+    },
+    {
+      "h2": "Trust factor",
+      "body": "Great if housemates or sitters are wary of always-on cams."
+    }
+  ],
+  "products": [
+    {
+      "name": "Pet Camera Privacy Shutter",
+      "asin_query": "pet camera physical privacy shutter",
+      "price": "from $45",
+      "blurb": "Mechanical lens cover."
+    },
+    {
+      "name": "Indoor Cam with Shutter",
+      "asin_query": "indoor camera privacy shutter auto",
+      "price": "from $50",
+      "blurb": "Scheduled close."
+    },
+    {
+      "name": "Pet Cam Local Shutter",
+      "asin_query": "pet camera local shutter no cloud",
+      "price": "from $48",
+      "blurb": "Private by design."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Does the shutter kill alerts?",
+      "a": "Yes when closed — that's the point; open to monitor."
+    },
+    {
+      "q": "Is it hack-proof?",
+      "a": "A closed mechanical shutter blocks the lens entirely."
+    }
+  ],
+  "source": "seed"
+}

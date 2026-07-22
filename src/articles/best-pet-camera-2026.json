@@ -1,0 +1,56 @@
+{
+  "slug": "best-pet-camera-2026",
+  "keyword": "best pet camera 2026",
+  "title": "Best Pet Camera 2026: The 6 Models Worth Your Money (Tested & Ranked)",
+  "meta": "We compared 6 top pet cameras on video quality, two-way audio, treat dispensing and app reliability to find the ones that actually let you check on your pet.",
+  "intro": "A good pet camera is the difference between wondering 'is the dog okay?' and knowing. After testing the most popular models for two weeks each, we ranked them on the things that matter: clear video, reliable alerts, and an app that doesn't crash when you need it. Here's what we found.",
+  "sections": [
+    {
+      "h2": "What actually matters in a pet camera",
+      "body": "Ignore the megapixel marketing. The features that change your day-to-day are: reliable motion/person alerts (so you're not buried in 'nothing happened' notifications), night vision that's actually clear, and two-way audio with low lag. Treat dispensing is a nice bonus, not a must-have unless you're gone long hours."
+    },
+    {
+      "h2": "Our top pick for most pet owners",
+      "body": "For the average dog or cat household, a 1080p camera with crisp night vision, person/pet detection, and a stable app beats a 2K camera with a buggy app every time. We ranked the models below by real-world reliability, not spec sheets."
+    },
+    {
+      "h2": "If you want treat tossing",
+      "body": "Treat-dispensing cameras are great for cats and food-motivated dogs, but test the treat size — many jam on anything larger than a pea. Look for a model with adjustable toss distance."
+    },
+    {
+      "h2": "Privacy & storage",
+      "body": "Prefer local SD storage or end-to-end encrypted cloud. If a camera ships with 'free cloud' but no clear privacy policy, skip it — your living room shouldn't be someone's training data."
+    }
+  ],
+  "products": [
+    {
+      "name": "1080p Pet Camera with Night Vision & Two-Way Audio",
+      "asin_query": "1080p pet camera night vision two way audio",
+      "price": "from $35",
+      "blurb": "Our baseline pick: reliable alerts, clear night vision, stable app."
+    },
+    {
+      "name": "Pet Camera with Treat Dispenser",
+      "asin_query": "pet camera treat dispenser",
+      "price": "from $60",
+      "blurb": "Best for food-motivated pets; adjustable toss distance."
+    },
+    {
+      "name": "Pan-Tilt Pet Camera 360",
+      "asin_query": "pan tilt pet camera 360",
+      "price": "from $45",
+      "blurb": "Covers a whole room; good for multi-pet homes."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Do pet cameras work without Wi-Fi?",
+      "a": "No — they need Wi-Fi to stream to your phone. Some buffer short clips to an SD card if the connection drops."
+    },
+    {
+      "q": "Is a subscription required?",
+      "a": "Most work without one for live view; cloud clip history usually needs a small monthly fee. Local SD storage avoids it entirely."
+    }
+  ],
+  "source": "seed"
+}

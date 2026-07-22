@@ -1,0 +1,52 @@
+{
+  "slug": "cat-water-fountain-stainless-3l",
+  "keyword": "best stainless steel cat fountain 3 litre",
+  "title": "Best Stainless Steel Cat Fountain (3 Litre)",
+  "meta": "Larger 3L stainless fountains for multi-cat homes and less frequent refills.",
+  "intro": "A 3L stainless fountain means fewer refills and a hygienic, biofilm-resistant bowl for busy households.",
+  "sections": [
+    {
+      "h2": "Why 3L",
+      "body": "Multi-cat homes or hot climates drain smaller fountains fast; 3L buys time."
+    },
+    {
+      "h2": "Stainless hygiene",
+      "body": "Easier to keep clean than plastic; fewer cat-chin rashes."
+    },
+    {
+      "h2": "Filter cost",
+      "body": "Budget for standard filters; check they're easy to source."
+    }
+  ],
+  "products": [
+    {
+      "name": "3L Stainless Cat Fountain",
+      "asin_query": "stainless steel cat fountain 3 litre",
+      "price": "from $45",
+      "blurb": "Large, hygienic."
+    },
+    {
+      "name": "3L Pet Fountain with Filter",
+      "asin_query": "3l pet water fountain stainless filter",
+      "price": "from $48",
+      "blurb": "Standard filters."
+    },
+    {
+      "name": "Quiet 3L Cat Fountain",
+      "asin_query": "quiet 3l stainless cat fountain",
+      "price": "from $52",
+      "blurb": "Low-noise pump."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How often to refill 3L?",
+      "a": "Roughly weekly for one cat; days for two."
+    },
+    {
+      "q": "Is stainless worth the premium?",
+      "a": "Yes for cats prone to chin acne from plastic."
+    }
+  ],
+  "source": "seed"
+}

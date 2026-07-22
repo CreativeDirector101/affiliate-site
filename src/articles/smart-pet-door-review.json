@@ -1,0 +1,52 @@
+{
+  "slug": "smart-pet-door-review",
+  "keyword": "best smart microchip pet door",
+  "title": "Best Smart / Microchip Pet Door: Let Only Your Pet In",
+  "meta": "Microchip and collar-tag smart pet doors compared on compatibility, security and installation.",
+  "intro": "A smart pet door ends the 'let the dog out at 6am' routine and keeps raccoons out. The key is matching the door to your pet's microchip or tag.",
+  "sections": [
+    {
+      "h2": "Microchip vs. collar tag",
+      "body": "Microchip-reading doors never get 'lost' like a collar tag can, but only work if your pet is chipped. Collar-tag doors are cheaper and work for any pet but fail if the collar comes off."
+    },
+    {
+      "h2": "Security & intruders",
+      "body": "A smart door that reads your pet's chip won't open for the neighbor's cat or a raccoon. Check the locking modes (in-only, out-only, full, locked)."
+    },
+    {
+      "h2": "Installation reality",
+      "body": "Most mount in a standard door or a wall. Wall installs need a tunnel kit. Measure your pet's shoulder height — mount the flap so they don't trip."
+    }
+  ],
+  "products": [
+    {
+      "name": "Microchip-Reading Smart Pet Door",
+      "asin_query": "microchip smart pet door",
+      "price": "from $120",
+      "blurb": "Reads your pet's existing chip; no collar needed."
+    },
+    {
+      "name": "Collar-Tag Electronic Pet Door",
+      "asin_query": "electronic pet door collar tag",
+      "price": "from $80",
+      "blurb": "Budget option for chipped-or-not pets."
+    },
+    {
+      "name": "Smart Pet Door Wall Installation Kit",
+      "asin_query": "pet door wall tunnel kit",
+      "price": "from $40",
+      "blurb": "For wall (not door) installs."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Will it work with any microchip?",
+      "a": "Most read the common 9, 10 and 15-digit ISO chips, but confirm your pet's chip type against the door spec."
+    },
+    {
+      "q": "Can I keep my pet in at night?",
+      "a": "Yes — all smart doors have a manual lock mode for nighttime or weather."
+    }
+  ],
+  "source": "seed"
+}

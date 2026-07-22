@@ -1,0 +1,52 @@
+{
+  "slug": "dog-gps-tracker-for-hiking",
+  "keyword": "best dog gps tracker for hiking off leash",
+  "title": "Best Dog GPS Tracker for Hiking & Off-Leash Trails",
+  "meta": "Rugged, long-range GPS trackers built for hikes, forests and off-leash adventures.",
+  "intro": "Trail dogs cover miles. You need real-time tracking with a rugged, waterproof build and battery that survives a full day out.",
+  "sections": [
+    {
+      "h2": "Real-time vs. mesh",
+      "body": "On remote trails, cellular real-time needs coverage; mesh/radio trackers work where phones don't but need you to be within range."
+    },
+    {
+      "h2": "Battery for all-day hikes",
+      "body": "Look for 12-24h on a charge; bring a power bank for multi-day trips."
+    },
+    {
+      "h2": "Ruggedness",
+      "body": "IP67+ water resistance and a shock-proof collar mount survive bush and water."
+    }
+  ],
+  "products": [
+    {
+      "name": "Rugged Real-Time GPS Dog Tracker",
+      "asin_query": "rugged gps dog tracker hiking",
+      "price": "from $90",
+      "blurb": "Waterproof, long battery."
+    },
+    {
+      "name": "Long-Range Radio Dog Tracker",
+      "asin_query": "long range radio dog tracker off leash",
+      "price": "from $120",
+      "blurb": "Works without cell coverage."
+    },
+    {
+      "name": "Dog GPS Collar Mount",
+      "asin_query": "dog gps collar mount waterproof",
+      "price": "from $20",
+      "blurb": "Secure the unit to any collar."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Do they work in deep forest?",
+      "a": "Cellular ones lose signal under heavy canopy; radio/mesh fare better short-range."
+    },
+    {
+      "q": "How heavy is too heavy?",
+      "a": "Keep the unit under ~10% of your dog's weight for comfort."
+    }
+  ],
+  "source": "seed"
+}

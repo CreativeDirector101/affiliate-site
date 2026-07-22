@@ -1,0 +1,52 @@
+{
+  "slug": "dog-activity-monitor-for-weight-loss",
+  "keyword": "dog activity monitor for weight loss",
+  "title": "Dog Activity Monitor for Weight Loss (Track & Trim)",
+  "meta": "Activity trackers that help overweight dogs slim down with goals and trends.",
+  "intro": "An activity monitor turns 'is my dog getting enough exercise' into numbers you can act on.",
+  "sections": [
+    {
+      "h2": "Goal setting",
+      "body": "Some apps set a daily activity goal; use it to ramp walks gradually."
+    },
+    {
+      "h2": "Food correlation",
+      "body": "Pair with portion control — exercise alone won't fix overfeeding."
+    },
+    {
+      "h2": "Comfort",
+      "body": "Light collar mount so the dog actually wears it daily."
+    }
+  ],
+  "products": [
+    {
+      "name": "Dog Fitness Tracker",
+      "asin_query": "dog activity monitor weight loss",
+      "price": "from $80",
+      "blurb": "Goals + trends."
+    },
+    {
+      "name": "Dog Activity Collar",
+      "asin_query": "dog activity collar tracker",
+      "price": "from $70",
+      "blurb": "Daily wear."
+    },
+    {
+      "name": "Smart Dog Tag Tracker",
+      "asin_query": "smart dog tag activity",
+      "price": "from $40",
+      "blurb": "Lightweight."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Can it replace diet?",
+      "a": "No — weight loss is mostly food; tracker verifies exercise."
+    },
+    {
+      "q": "Are the calories accurate?",
+      "a": "Estimates; use as trends not absolutes."
+    }
+  ],
+  "source": "seed"
+}

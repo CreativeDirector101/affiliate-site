@@ -1,0 +1,52 @@
+{
+  "slug": "best-pet-camera-2k",
+  "keyword": "best 2k pet camera for detail",
+  "title": "Best 2K Pet Camera for Crisp Detail",
+  "meta": "When 1080p isn't enough — 2K pet cameras that show fur, tags and mischief clearly.",
+  "intro": "If you want to read a collar tag or see exactly what your pet grabbed, 2K detail helps. We weighed it against bandwidth and price.",
+  "sections": [
+    {
+      "h2": "When 2K matters",
+      "body": "Identifying small objects, reading tags, zooming without pixelation."
+    },
+    {
+      "h2": "Bandwidth",
+      "body": "2K uses more storage and Wi-Fi; ensure your network handles it."
+    },
+    {
+      "h2": "App support",
+      "body": "Some '2K' cams cap live view at 1080p; check spec sheets."
+    }
+  ],
+  "products": [
+    {
+      "name": "2K Pet Camera",
+      "asin_query": "2k pet camera detail",
+      "price": "from $50",
+      "blurb": "Sharp zoom."
+    },
+    {
+      "name": "2K Pan Pet Camera",
+      "asin_query": "2k pan tilt pet camera",
+      "price": "from $60",
+      "blurb": "Detail + coverage."
+    },
+    {
+      "name": "2K Pet Camera SD",
+      "asin_query": "2k pet camera sd card",
+      "price": "from $55",
+      "blurb": "Local 2K recording."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is 2K worth the cost?",
+      "a": "If detail matters to you, yes; otherwise 1080p is fine."
+    },
+    {
+      "q": "Does it need more storage?",
+      "a": "Yes — 2K clips are larger; size the SD card up."
+    }
+  ],
+  "source": "seed"
+}

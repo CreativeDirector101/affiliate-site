@@ -1,5 +1,8 @@
 {
   "published": [
+    "automatic-cat-feeder-wet-food",
+    "automatic-dog-ball-launcher",
+    "automatic-cat-feeder-review",
     "best-pet-camera-2026",
     "best-gps-dog-tracker"
   ],
@@ -14,6 +17,24 @@
       "slug": "best-gps-dog-tracker",
       "keyword": "best gps dog tracker no monthly fee",
       "date": "2026-07-22"
+    },
+    {
+      "slug": "automatic-cat-feeder-review",
+      "keyword": "automatic cat feeder with app control",
+      "date": "2026-07-22",
+      "source": "seed"
+    },
+    {
+      "slug": "automatic-cat-feeder-wet-food",
+      "keyword": "automatic cat feeder for wet food refrigerated",
+      "date": "2026-07-22",
+      "source": "seed"
+    },
+    {
+      "slug": "automatic-dog-ball-launcher",
+      "keyword": "automatic dog ball launcher indoor",
+      "date": "2026-07-22",
+      "source": "seed"
     }
   ]
 }

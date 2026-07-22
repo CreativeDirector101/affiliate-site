@@ -1,0 +1,52 @@
+{
+  "slug": "pet-camera-for-multiple-cats",
+  "keyword": "best pet camera for multiple cats",
+  "title": "Best Pet Camera for Multiple Cats (Whole-Room Coverage)",
+  "meta": "Cameras that cover a multi-cat home — wide angle, pan-tilt, and multi-pet tracking.",
+  "intro": "With several cats, you need to see the whole room, not one corner. Wide field of view and pan-tilt beat a fixed narrow lens.",
+  "sections": [
+    {
+      "h2": "Field of view",
+      "body": "Aim for 140°+ or a pan-tilt model so one camera covers a large room."
+    },
+    {
+      "h2": "Multi-pet alerts",
+      "body": "Some apps let you tag pets; most just flag motion. Don't overpay for 'AI pet recognition' that mislabels."
+    },
+    {
+      "h2": "Placement",
+      "body": "Ceiling corner mount sees more than a low shelf when cats use vertical space."
+    }
+  ],
+  "products": [
+    {
+      "name": "360 Pan-Tilt Pet Camera",
+      "asin_query": "pan tilt pet camera 360 wide angle",
+      "price": "from $45",
+      "blurb": "Covers a whole room."
+    },
+    {
+      "name": "Wide-Angle 2K Pet Camera",
+      "asin_query": "wide angle pet camera 2k",
+      "price": "from $50",
+      "blurb": "Sharp detail across the room."
+    },
+    {
+      "name": "Multi-Cat Treat Camera",
+      "asin_query": "pet camera multiple cats treat",
+      "price": "from $65",
+      "blurb": "Engage several cats at once."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Can one camera watch two rooms?",
+      "a": "No — you need one per room or a wide common area."
+    },
+    {
+      "q": "Do cats trigger false alerts?",
+      "a": "Motion alerts fire on any movement; pet-specific detection reduces but doesn't eliminate them."
+    }
+  ],
+  "source": "seed"
+}

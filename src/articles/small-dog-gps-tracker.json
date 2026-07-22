@@ -1,0 +1,52 @@
+{
+  "slug": "small-dog-gps-tracker",
+  "keyword": "best gps tracker for small dogs under 10 lbs",
+  "title": "Best GPS Tracker for Small Dogs Under 10 lbs (Lightweight & Safe)",
+  "meta": "Lightweight trackers that won't weigh down a toy-breed dog but still locate them fast.",
+  "intro": "Tiny dogs need tiny trackers — but lighter usually means smaller battery. We balanced weight against range and battery life.",
+  "sections": [
+    {
+      "h2": "Weight ceiling",
+      "body": "Keep the tracker under ~15g for dogs under 10 lbs so it doesn't tug the neck."
+    },
+    {
+      "h2": "Bluetooth vs GPS",
+      "body": "For a fenced-yard tiny dog, a light Bluetooth tag is enough. For off-leash, you need real GPS despite the weight."
+    },
+    {
+      "h2": "Collar fit",
+      "body": "Use a small, snug collar so a light tracker doesn't dangle or get chewed."
+    }
+  ],
+  "products": [
+    {
+      "name": "Ultra-Light Bluetooth Dog Tag",
+      "asin_query": "lightweight dog tracker small breed",
+      "price": "from $25",
+      "blurb": "Under 10g; short range."
+    },
+    {
+      "name": "Mini GPS Dog Tracker",
+      "asin_query": "mini gps tracker small dog",
+      "price": "from $70",
+      "blurb": "Real-time, still light."
+    },
+    {
+      "name": "Small Dog Collar with Ring",
+      "asin_query": "small dog collar tracker holder",
+      "price": "from $12",
+      "blurb": "Holds a mini tracker securely."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Will my 5lb dog tolerate it?",
+      "a": "Yes if under ~10g and on a well-fitted collar."
+    },
+    {
+      "q": "Does GPS drain fast on tiny units?",
+      "a": "Smaller battery = shorter life; charge daily for real-time models."
+    }
+  ],
+  "source": "seed"
+}

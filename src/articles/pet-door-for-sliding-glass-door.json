@@ -1,0 +1,52 @@
+{
+  "slug": "pet-door-for-sliding-glass-door",
+  "keyword": "best pet door for sliding glass door",
+  "title": "Best Pet Door for a Sliding Glass Door (No Cutting Required)",
+  "meta": "Panel inserts that add a pet door to a sliding door without modifying the frame.",
+  "intro": "A sliding-glass pet-door panel drops into the track — no cutting, renter-friendly, and removable.",
+  "sections": [
+    {
+      "h2": "Panel type",
+      "body": "A fixed panel with a flap that fits your door's track height."
+    },
+    {
+      "h2": "Security",
+      "body": "Locking inserts secure the sliding door when you're away."
+    },
+    {
+      "h2": "Renter-friendly",
+      "body": "No permanent modification; take it when you move."
+    }
+  ],
+  "products": [
+    {
+      "name": "Sliding Door Pet Panel",
+      "asin_query": "sliding glass door pet door panel",
+      "price": "from $130",
+      "blurb": "No cutting."
+    },
+    {
+      "name": "Locking Sliding Pet Door",
+      "asin_query": "lockable sliding pet door insert",
+      "price": "from $150",
+      "blurb": "Secure when away."
+    },
+    {
+      "name": "Adjustable Height Pet Panel",
+      "asin_query": "adjustable sliding pet door panel",
+      "price": "from $140",
+      "blurb": "Fits varied tracks."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Will it fit my door?",
+      "a": "Measure track height; panels are adjustable within a range."
+    },
+    {
+      "q": "Can I still lock the door?",
+      "a": "Yes with the included lock insert."
+    }
+  ],
+  "source": "seed"
+}

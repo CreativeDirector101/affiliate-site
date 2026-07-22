@@ -1,0 +1,52 @@
+{
+  "slug": "quiet-pet-water-fountain",
+  "keyword": "quietest pet water fountain for bedroom",
+  "title": "Quietest Pet Water Fountain for the Bedroom (Sleep-Friendly)",
+  "meta": "Near-silent pet fountains that won't keep you awake at night.",
+  "intro": "A fountain in the bedroom only works if the pump is whisper-quiet. We prioritized measured low-dB pumps and anti-vibration design.",
+  "sections": [
+    {
+      "h2": "Pump noise",
+      "body": "Cheap pumps hum; look for 'ultra-quiet' pumps rated under 30dB at low speed."
+    },
+    {
+      "h2": "Water level matters",
+      "body": "A low tank makes pumps gurgle. Keep it topped and use a wide reservoir."
+    },
+    {
+      "h2": "Placement",
+      "body": "A foam pad under the fountain kills vibration buzz on hard floors."
+    }
+  ],
+  "products": [
+    {
+      "name": "Ultra-Quiet Pet Fountain",
+      "asin_query": "quiet pet water fountain bedroom",
+      "price": "from $38",
+      "blurb": "Low-dB pump."
+    },
+    {
+      "name": "Silent Cat Water Fountain",
+      "asin_query": "silent cat fountain low noise",
+      "price": "from $42",
+      "blurb": "Whisper pump + foam pad."
+    },
+    {
+      "name": "Adjustable-Flow Quiet Fountain",
+      "asin_query": "adjustable flow quiet pet fountain",
+      "price": "from $45",
+      "blurb": "Lower flow = less noise."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Why does it get loud over time?",
+      "a": "Debris on the impeller; clean monthly."
+    },
+    {
+      "q": "Does flow speed affect noise?",
+      "a": "Yes — lowest setting is quietest."
+    }
+  ],
+  "source": "seed"
+}

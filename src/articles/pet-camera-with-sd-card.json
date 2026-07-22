@@ -1,0 +1,52 @@
+{
+  "slug": "pet-camera-with-sd-card",
+  "keyword": "pet camera with sd card local storage 128gb",
+  "title": "Pet Camera With SD Card (Local 128GB Storage)",
+  "meta": "Pet cameras that record straight to a microSD card — no cloud, no fees.",
+  "intro": "A microSD slot turns a cheap camera into a fee-free recorder. We cover capacity, loop recording and card class.",
+  "sections": [
+    {
+      "h2": "Card class",
+      "body": "Use a high-endurance card (Video Monitoring rated) to survive constant writes."
+    },
+    {
+      "h2": "Loop recording",
+      "body": "When full, the camera overwrites oldest clips — set retention to your need."
+    },
+    {
+      "h2": "128GB math",
+      "body": "At 1080p, ~128GB holds several days of motion-only clips."
+    }
+  ],
+  "products": [
+    {
+      "name": "Pet Camera 128GB SD",
+      "asin_query": "pet camera sd card 128gb local",
+      "price": "from $40",
+      "blurb": "Records locally, no fee."
+    },
+    {
+      "name": "High-Endurance MicroSD 128GB",
+      "asin_query": "high endurance microsd 128gb security",
+      "price": "from $18",
+      "blurb": "Survives 24/7 writes."
+    },
+    {
+      "name": "Pet Camera with NAS",
+      "asin_query": "pet camera local nas storage",
+      "price": "from $55",
+      "blurb": "Network storage option."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Does it notify without cloud?",
+      "a": "Yes, app push alerts are free; only remote clip history may need the card."
+    },
+    {
+      "q": "What card should I buy?",
+      "a": "High-endurance (not plain) for 24/7 recording."
+    }
+  ],
+  "source": "seed"
+}

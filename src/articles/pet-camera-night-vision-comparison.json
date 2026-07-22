@@ -1,0 +1,52 @@
+{
+  "slug": "pet-camera-night-vision-comparison",
+  "keyword": "pet camera night vision infrared vs color",
+  "title": "Pet Camera Night Vision: Infrared vs. Color — Which to Pick",
+  "meta": "How IR and full-color night vision differ, and which suits a pet owner.",
+  "intro": "Night vision lets you check on a pet in a dark room. Infrared is invisible but black-and-white; color needs a light but shows detail.",
+  "sections": [
+    {
+      "h2": "Infrared (IR)",
+      "body": "Invisible to pets, black-and-white, no light disturbance. Best for not waking a sleeping pet."
+    },
+    {
+      "h2": "Color night vision",
+      "body": "Uses a dim warm light to show color; better for identifying what your pet is chewing."
+    },
+    {
+      "h2": "IR range",
+      "body": "Check the stated range; cheap cameras wash out past a few feet."
+    }
+  ],
+  "products": [
+    {
+      "name": "IR Pet Camera Night Vision",
+      "asin_query": "infrared pet camera night vision",
+      "price": "from $35",
+      "blurb": "Invisible, B&W."
+    },
+    {
+      "name": "Color Night Vision Pet Camera",
+      "asin_query": "color night vision pet camera",
+      "price": "from $50",
+      "blurb": "Shows detail in low light."
+    },
+    {
+      "name": "Spotlight Pet Camera",
+      "asin_query": "pet camera with spotlight night",
+      "price": "from $55",
+      "blurb": "Color via dim light."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Does IR bother pets?",
+      "a": "No — it's invisible to them."
+    },
+    {
+      "q": "Which is better for behavior?",
+      "a": "Color helps you see what they're getting into; IR is less disruptive."
+    }
+  ],
+  "source": "seed"
+}

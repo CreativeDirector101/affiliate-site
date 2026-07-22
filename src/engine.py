@@ -3,15 +3,21 @@
 """
 AUTONOMOUS AFFILIATE ENGINE
 ===========================
-Builds a GitHub-Pages-ready affiliate site from curated seed content and
-runs on a schedule to publish new articles.
+Builds a GitHub-Pages-ready affiliate site from article JSON files in
+src/articles/ and runs on a schedule to publish new articles.
 
 Commands:
   python engine.py build            # (re)build the whole site into ./public
-  python engine.py run              # daily engine: publish next article, build, commit
+  python engine.py run              # daily engine: publish N queued articles, build, commit, push
   python engine.py status           # show what's published + next keyword
 
-Only dependency: Python 3.11+ (uses stdlib tomllib). No pip installs needed.
+Behavior:
+  - Reads every *.json in src/articles/ (seed + AI-generated merged together).
+  - Publishes up to `articles_per_run` queued articles per run.
+  - If autonomous writing is enabled AND the queue is empty, mints new
+    long-tail articles via the LLM writer before publishing.
+
+Only dependency: Python 3.11+ (stdlib tomllib). No pip installs needed.
 """
 import os
 import sys
@@ -23,11 +29,12 @@ from datetime import datetime, timezone
 
 try:
     import tomllib
-except ModuleNotFoundError:  # Python < 3.11
+except ModuleNotFoundError:
     tomllib = None
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "src"
+ART_DIR = SRC / "articles"
 PUBLIC = ROOT / "public"
 CONFIG_PATH = ROOT / "config.toml"
 STATE_PATH = ROOT / "state.json"
@@ -35,9 +42,7 @@ STATE_PATH = ROOT / "state.json"
 # ---------------------------------------------------------------- config
 def load_config():
     if tomllib is None:
-        # minimal fallback parser
-        cfg = {"site": {}, "affiliate": {}, "llm": {}, "publish": {}, "engine": {}}
-        return cfg
+        return {"site": {}, "affiliate": {}, "llm": {}, "publish": {}, "engine": {}}
     with open(CONFIG_PATH, "rb") as f:
         return tomllib.load(f)
 
@@ -52,11 +57,22 @@ def get(cfg, *keys, default=""):
 # ---------------------------------------------------------------- state
 def load_state():
     if STATE_PATH.exists():
-        return json.loads(STATE_PATH.read_text())
-    return {"published": [], "queue_index": 0, "history": []}
+        return json.loads(STATE_PATH.read_text(encoding="utf-8"))
+    return {"published": [], "queue_index": 0, "history": [], "generated": []}
 
 def save_state(state):
-    STATE_PATH.write_text(json.dumps(state, indent=2), encoding="utf-8")
+    STATE_PATH.write_text(json.dumps(state, indent=2, ensure_ascii=False), encoding="utf-8")
+
+# ---------------------------------------------------------------- articles
+def load_articles():
+    arts = []
+    if ART_DIR.exists():
+        for p in sorted(ART_DIR.glob("*.json")):
+            try:
+                arts.append(json.loads(p.read_text(encoding="utf-8")))
+            except Exception as e:
+                print(f"[warn] skip bad article {p.name}: {e}")
+    return arts
 
 # ---------------------------------------------------------------- helpers
 def aff_link(cfg, query):
@@ -71,21 +87,48 @@ def esc(s):
 def now_iso():
     return datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
+def write(path, text):
+    path.write_text(text, encoding="utf-8")
+
 # ---------------------------------------------------------------- render
+CSS = """
+:root{--bg:#0f1115;--card:#181b22;--fg:#e8e8ea;--muted:#9aa0aa;--accent:#5b8cff;--border:#262b34}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+header{background:var(--card);padding:14px 20px;border-bottom:1px solid var(--border)}
+.brand{color:var(--accent);font-weight:700;font-size:18px;text-decoration:none}
+main{max-width:820px;margin:0 auto;padding:28px 20px}
+.article h1{font-size:30px;line-height:1.25}
+.meta,.k{color:var(--muted);font-size:14px}
+.lead{color:var(--muted);font-size:18px}
+h2{margin-top:34px;border-bottom:1px solid var(--border);padding-bottom:6px}
+.intro{font-size:18px}
+.cards{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));margin-top:12px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px}
+.card h3{margin:0 0 6px;font-size:16px}
+.card h3 a{color:var(--fg);text-decoration:none}
+.price{color:var(--accent);font-weight:600;margin:4px 0}
+.btn{display:inline-block;margin-top:8px;background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;font-size:14px}
+ul.index{list-style:none;padding:0}
+ul.index li{padding:12px 0;border-bottom:1px solid var(--border)}
+ul.index a{color:var(--fg);font-size:18px;text-decoration:none;font-weight:600}
+ul.index a:hover{color:var(--accent)}
+.faq dt{font-weight:600;margin-top:10px}
+.faq dd{margin:0;color:var(--muted)}
+.disclaimer{font-size:13px;color:var(--muted);border-top:1px solid var(--border);margin-top:30px;padding-top:14px}
+.back a{color:var(--accent);text-decoration:none}
+footer{padding:20px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--border)}
+"""
+
 def render_article(cfg, art):
-    title = esc(art["title"])
-    meta = esc(art.get("meta", ""))
-    intro = esc(art.get("intro", ""))
+    title = esc(art["title"]); meta = esc(art.get("meta", "")); intro = esc(art.get("intro", ""))
     site_title = esc(get(cfg, "site", "title", default="Affiliate Site"))
     base = esc(get(cfg, "site", "base_url", default=""))
-
     parts = [f'<p class="intro">{intro}</p>']
     for sec in art.get("sections", []):
         parts.append(f'<h2>{esc(sec["h2"])}</h2>')
         parts.append(f'<p>{esc(sec["body"])}</p>')
     sections_html = "\n".join(parts)
-
-    # product cards
     cards = []
     for p in art.get("products", []):
         link = aff_link(cfg, p["asin_query"])
@@ -97,13 +140,11 @@ def render_article(cfg, art):
           <a class="btn" href="{link}" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a>
         </div>""")
     products_html = "\n".join(cards)
-
     faq = art.get("faq", [])
     faq_html = ""
     if faq:
-        items = "".join(f"<dt>{esc(q)}</dt><dd>{esc(a)}</dd>" for q, a in [(f['q'], f['a']) for f in faq])
+        items = "".join(f"<dt>{esc(f['q'])}</dt><dd>{esc(f['a'])}</dd>" for f in faq)
         faq_html = f'<h2>Frequently Asked Questions</h2><dl class="faq">{items}</dl>'
-
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,7 +164,7 @@ def render_article(cfg, art):
 <h2>Top Picks</h2>
 <div class="cards">{products_html}</div>
 {faq_html}
-<p class="disclaimer">As an Amazon Associate we earn from qualifying purchases. Prices shown are approximate and change often.</p>
+<p class="disclaimer">As an Amazon Associate we earn from qualifying purchases. Prices shown are approximate and change often. This site contains affiliate links; we may earn a commission at no extra cost to you.</p>
 <p class="back"><a href="index.html">&larr; Back to all guides</a></p>
 </main>
 <footer><p>&copy; {datetime.now().year} {site_title}. Affiliate disclosure: links may earn us a commission at no extra cost to you.</p></footer>
@@ -139,7 +180,6 @@ def render_index(cfg, articles):
     for a in articles:
         items.append(f'<li><a href="{a["slug"]}.html">{esc(a["title"])}</a><br><span class="k">{esc(a.get("keyword",""))}</span></li>')
     list_html = "\n".join(items)
-    feed = esc(f"{base}/feed.xml")
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -167,10 +207,9 @@ def render_sitemap(cfg, articles):
     urls = [f"  <url><loc>{base}/index.html</loc></url>"]
     for a in articles:
         urls.append(f"  <url><loc>{base}/{a['slug']}.html</loc></url>")
-    urls = "\n".join(urls)
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{urls}
+{chr(10).join(urls)}
 </urlset>"""
 
 def render_feed(cfg, articles):
@@ -185,130 +224,117 @@ def render_feed(cfg, articles):
     <guid>{link}</guid>
     <description>{esc(a.get('meta',''))}</description>
   </item>""")
-    items = "\n".join(items)
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
   <title>{site_title}</title>
   <link>{base}/</link>
   <description>{esc(get(cfg,'site','description',default=''))}</description>
-{items}
+{chr(10).join(items)}
 </channel>
 </rss>"""
-
-CSS = """
-:root{--bg:#0f1115;--card:#181b22;--fg:#e8e8ea;--muted:#9aa0aa;--accent:#5b8cff;--border:#262b34}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-header{background:var(--card);padding:14px 20px;border-bottom:1px solid var(--border)}
-.brand{color:var(--accent);font-weight:700;font-size:18px;text-decoration:none}
-main{max-width:820px;margin:0 auto;padding:28px 20px}
-.article h1,.index+h2{font-size:30px;line-height:1.25}
-.meta,.k{color:var(--muted);font-size:14px}
-.lead{color:var(--muted);font-size:18px}
-h2{margin-top:34px;border-bottom:1px solid var(--border);padding-bottom:6px}
-.intro{font-size:18px}
-.cards{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));margin-top:12px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px}
-.card h3{margin:0 0 6px;font-size:16px}
-.card h3 a{color:var(--fg);text-decoration:none}
-.price{color:var(--accent);font-weight:600;margin:4px 0}
-.btn{display:inline-block;margin-top:8px;background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;font-size:14px}
-ul.index{list-style:none;padding:0}
-ul.index li{padding:12px 0;border-bottom:1px solid var(--border)}
-ul.index a{color:var(--fg);font-size:18px;text-decoration:none;font-weight:600}
-ul.index a:hover{color:var(--accent)}
-.faq dt{font-weight:600;margin-top:10px}
-.faq dd{margin:0;color:var(--muted)}
-.disclaimer{font-size:13px;color:var(--muted);border-top:1px solid var(--border);margin-top:30px;padding-top:14px}
-.back a{color:var(--accent);text-decoration:none}
-footer{padding:20px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--border)}
-"""
 
 # ---------------------------------------------------------------- build
 def build(cfg, articles):
     PUBLIC.mkdir(exist_ok=True)
-    published = [a for a in articles if a["slug"] in load_state().get("published", [])]
-    # include all known articles for index/sitemap
-    all_arts = articles
-    (PUBLIC / "index.html").write_text(render_index(cfg, all_arts), encoding="utf-8")
-    for a in all_arts:
+    (PUBLIC / "index.html").write_text(render_index(cfg, articles), encoding="utf-8")
+    for a in articles:
         (PUBLIC / f"{a['slug']}.html").write_text(render_article(cfg, a), encoding="utf-8")
-    (PUBLIC / "sitemap.xml").write_text(render_sitemap(cfg, all_arts), encoding="utf-8")
-    (PUBLIC / "feed.xml").write_text(render_feed(cfg, all_arts), encoding="utf-8")
-    (PUBLIC / "robots.txt").write_text("User-agent: *\nAllow: /\nSitemap: " +
-        get(cfg, "site", "base_url", default="https://example.com").rstrip("/") + "/sitemap.xml\n")
-    # GitHub Pages needs this to serve from project root
+    (PUBLIC / "sitemap.xml").write_text(render_sitemap(cfg, articles), encoding="utf-8")
+    (PUBLIC / "feed.xml").write_text(render_feed(cfg, articles), encoding="utf-8")
+    (PUBLIC / "robots.txt").write_text(
+        "User-agent: *\nAllow: /\nSitemap: " +
+        get(cfg, "site", "base_url", default="https://example.com").rstrip("/") + "/sitemap.xml\n",
+        encoding="utf-8")
     (PUBLIC / ".nojekyll").write_text("", encoding="utf-8")
-    n_pub = len(set(a["slug"] for a in all_arts))
-    return n_pub
+    return len(articles)
+
+# ---------------------------------------------------------------- LLM hook
+def maybe_generate(cfg, state, articles):
+    """If autonomous writing is on and queue empty, mint new articles."""
+    enabled = get(cfg, "llm", "enable_autonomous_writing", default=False)
+    key = get(cfg, "llm", "openrouter_api_key", default="")
+    if not (enabled and key):
+        return 0
+    try:
+        sys.path.insert(0, str(SRC))
+        from llm_writer import generate_batch
+    except Exception as e:
+        print(f"[llm] writer unavailable: {e}")
+        return 0
+    published = set(state.get("published", []))
+    queue = [a for a in articles if a["slug"] not in published]
+    if queue:
+        return 0
+    n = generate_batch(cfg, ART_DIR, count=max(3, get(cfg, "engine", "articles_per_run", default=1)))
+    print(f"[llm] generated {n} new articles")
+    return n
 
 # ---------------------------------------------------------------- daily run
 def run(cfg):
-    try:
-        from seed_content import SEED_ARTICLES
-    except ImportError:
-        sys.path.insert(0, str(SRC))
-        from seed_content import SEED_ARTICLES
+    articles = load_articles()
     state = load_state()
     published = set(state.get("published", []))
-    queue = [a for a in SEED_ARTICLES if a["slug"] not in published]
-    if not queue:
-        msg = "Queue empty — all seed articles published. Add more seed content or enable autonomous LLM writing."
-        print(msg)
-        return msg
-    # pick next by queue order (round-robin)
-    art = queue[0]
-    published.add(art["slug"])
+    # refill queue via LLM if enabled + empty
+    maybe_generate(cfg, state, articles)
+    articles = load_articles()  # reload after possible generation
+    queue = [a for a in articles if a["slug"] not in published]
+    per_run = int(get(cfg, "engine", "articles_per_run", default=1))
+    batch = queue[:per_run]
+    if not batch:
+        print("Queue empty and autonomous writing off/ unavailable — nothing to publish.")
+        return None
+    for art in batch:
+        published.add(art["slug"])
+        state.setdefault("history", []).append(
+            {"slug": art["slug"], "keyword": art["keyword"], "date": now_iso(),
+             "source": art.get("source", "seed")})
     state["published"] = list(published)
-    state["history"].append({"slug": art["slug"], "keyword": art["keyword"], "date": now_iso()})
     save_state(state)
-    n = build(cfg, SEED_ARTICLES)
-    # git commit + optional push (push needs a remote + credentials = your setup)
-    if get(cfg, "publish", "auto_git_commit", default=True):
+    n = build(cfg, articles)
+    _git_commit_push(cfg, batch)
+    print(f"[ok] published {len(batch)} article(s): " +
+          ", ".join(a['keyword'] for a in batch) +
+          f" | total: {n} | remaining: {len(queue)-len(batch)}")
+    return [a["slug"] for a in batch]
+
+def _git_commit_push(cfg, batch):
+    if not get(cfg, "publish", "auto_git_commit", default=True):
+        return
+    try:
+        subprocess.run(["git", "-C", str(ROOT), "add", "-A"], check=True, capture_output=True)
+        kw = "; ".join(a["keyword"] for a in batch)
+        subprocess.run(["git", "-C", str(ROOT), "commit", "-m", f"publish: {kw} ({now_iso()})"],
+                        check=True, capture_output=True)
+        print("[git] committed")
+    except subprocess.CalledProcessError as e:
+        print(f"[git] commit skipped/failed: {e}")
+    if get(cfg, "publish", "auto_git_push", default=False):
         try:
-            subprocess.run(["git", "-C", str(ROOT), "add", "-A"], check=True, capture_output=True)
-            subprocess.run(["git", "-C", str(ROOT), "commit", "-m",
-                            f"publish: {art['keyword']} ({now_iso()})"], check=True, capture_output=True)
-            print(f"[git] committed new article: {art['slug']}")
+            subprocess.run(["git", "-C", str(ROOT), "push"], check=True, capture_output=True)
+            print("[git] pushed -> Pages rebuilds")
         except subprocess.CalledProcessError as e:
-            print(f"[git] commit skipped/failed (repo not initialized yet?): {e}")
-        if get(cfg, "publish", "auto_git_push", default=False):
-            try:
-                subprocess.run(["git", "-C", str(ROOT), "push"], check=True, capture_output=True)
-                print("[git] pushed to remote -> GitHub Pages will rebuild")
-            except subprocess.CalledProcessError as e:
-                print(f"[git] push skipped/failed (need remote + token?): {e}")
-    print(f"[ok] published '{art['keyword']}' | total articles: {n} | remaining in queue: {len(queue)-1}")
-    return art["slug"]
+            print(f"[git] push skipped/failed: {e}")
 
 def status(cfg):
-    try:
-        from seed_content import SEED_ARTICLES
-    except ImportError:
-        sys.path.insert(0, str(SRC))
-        from seed_content import SEED_ARTICLES
+    articles = load_articles()
     state = load_state()
     published = state.get("published", [])
-    queue = [a for a in SEED_ARTICLES if a["slug"] not in published]
-    print(f"Total seed articles: {len(SEED_ARTICLES)}")
-    print(f"Published: {len(published)} -> {published}")
-    print(f"Next to publish: {queue[0]['keyword'] if queue else 'NONE (queue empty)'}")
-    print(f"Auto-git-commit: {get(cfg,'publish','auto_git_commit',default=True)}")
+    queue = [a for a in articles if a["slug"] not in published]
+    print(f"Total article files: {len(articles)}")
+    print(f"Published: {len(published)}")
+    print(f"Remaining in queue: {len(queue)}")
+    print(f"Next: {queue[0]['keyword'] if queue else 'NONE (queue empty)'}")
+    print(f"articles_per_run: {get(cfg,'engine','articles_per_run',default=1)}")
     print(f"Amazon tag set: {get(cfg,'affiliate','amazon_tag') != 'YOURTAG-20'}")
+    print(f"Autonomous writing: {get(cfg,'llm','enable_autonomous_writing',default=False)}")
     return state
 
-# ---------------------------------------------------------------- main
 def main():
     cmd = sys.argv[1] if len(sys.argv) > 1 else "build"
     cfg = load_config()
     if cmd == "build":
-        try:
-            from seed_content import SEED_ARTICLES
-        except ImportError:
-            sys.path.insert(0, str(SRC))
-            from seed_content import SEED_ARTICLES
-        n = build(cfg, SEED_ARTICLES)
+        n = build(cfg, load_articles())
         print(f"[ok] built site with {n} articles into ./public")
     elif cmd == "run":
         run(cfg)
