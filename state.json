@@ -2,9 +2,12 @@
   "published": [
     "automatic-cat-feeder-wet-food",
     "automatic-dog-ball-launcher",
+    "best-gps-dog-tracker",
     "automatic-cat-feeder-review",
+    "automatic-dog-feeder-large-breed",
+    "best-pet-camera-2k",
     "best-pet-camera-2026",
-    "best-gps-dog-tracker"
+    "automatic-pet-feeder-wet-and-dry"
   ],
   "queue_index": 0,
   "history": [
@@ -33,6 +36,24 @@
     {
       "slug": "automatic-dog-ball-launcher",
       "keyword": "automatic dog ball launcher indoor",
+      "date": "2026-07-22",
+      "source": "seed"
+    },
+    {
+      "slug": "automatic-dog-feeder-large-breed",
+      "keyword": "automatic dog feeder for large breed 10l",
+      "date": "2026-07-22",
+      "source": "seed"
+    },
+    {
+      "slug": "automatic-pet-feeder-wet-and-dry",
+      "keyword": "automatic pet feeder wet and dry food",
+      "date": "2026-07-22",
+      "source": "seed"
+    },
+    {
+      "slug": "best-pet-camera-2k",
+      "keyword": "best 2k pet camera for detail",
       "date": "2026-07-22",
       "source": "seed"
     }
