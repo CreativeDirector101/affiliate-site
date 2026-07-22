@@ -1,16 +1,19 @@
 {
   "published": [
-    "best-pet-camera-2026",
-    "best-pet-camera-2k",
-    "best-pet-door-for-wall",
-    "automatic-cat-feeder-wet-food",
-    "best-gps-dog-tracker",
+    "best-pet-water-fountain-plastic-free",
     "automatic-pet-feeder-wet-and-dry",
+    "automatic-cat-feeder-review",
+    "best-pet-door-for-wall",
+    "cheap-pet-camera-under-30",
+    "best-training-collar-vibration-only",
+    "best-pet-camera-2k",
+    "automatic-cat-feeder-wet-food",
+    "cat-water-fountain-stainless-3l",
+    "best-gps-dog-tracker",
+    "best-pet-camera-2026",
     "automatic-dog-ball-launcher",
     "automatic-dog-feeder-large-breed",
-    "best-training-collar-vibration-only",
-    "best-pet-water-fountain-plastic-free",
-    "automatic-cat-feeder-review"
+    "best-wifi-pet-camera-no-subscription"
   ],
   "queue_index": 0,
   "history": [
@@ -75,6 +78,24 @@
     {
       "slug": "best-training-collar-vibration-only",
       "keyword": "best vibration only dog training collar no shock",
+      "date": "2026-07-22",
+      "source": "seed"
+    },
+    {
+      "slug": "best-wifi-pet-camera-no-subscription",
+      "keyword": "best wifi pet camera no subscription",
+      "date": "2026-07-22",
+      "source": "seed"
+    },
+    {
+      "slug": "cat-water-fountain-stainless-3l",
+      "keyword": "best stainless steel cat fountain 3 litre",
+      "date": "2026-07-22",
+      "source": "seed"
+    },
+    {
+      "slug": "cheap-pet-camera-under-30",
+      "keyword": "best pet camera under 30 dollars",
       "date": "2026-07-22",
       "source": "seed"
     }
