@@ -1,0 +1,44 @@
+﻿# ============================================================
+#  AUTONOMOUS AFFILIATE ENGINE — config
+#  Edit the lines marked  >>> YOU FILL THIS IN  <<<
+# ============================================================
+
+[site]
+title = "Smart Pet Gear Lab"
+tagline = "Honest, hands-on reviews of pet tech that actually works"
+niche = "smart-pet-tech"
+base_url = "https://USERNAME.github.io/affiliate-site"   # >>> YOU: set after creating the repo
+author = "Smart Pet Gear Lab"
+description = "Unbiased reviews and buying guides for smart pet cameras, GPS trackers, auto-feeders and more."
+
+[affiliate]
+# >>> YOU: paste your Amazon Associates tracking ID here (e.g. yourname-20)
+amazon_tag = "YOURTAG-20"
+# Used to build links. Search links always resolve + credit you, so no fragile ASINs needed.
+amazon_search_url = "https://www.amazon.com/s?k="
+
+# ---- Optional: autonomous writing upgrade ----
+# Add a free OpenRouter key to make the DAILY engine write brand-new unique
+# articles on its own (true hands-off). Without it, the engine uses the
+# curated seed content you ship with, cycling through it.
+[llm]
+openrouter_api_key = ""
+model = "meta-llama/llama-3.3-70b-instruct"   # any OpenRouter model id
+enable_autonomous_writing = false  # set true once key is filled
+
+[publish]
+# The engine commits locally; you push once. GitHub Pages rebuilds on push.
+auto_git_commit = true
+auto_git_push = false   # set true after you add a remote + token; then the daily job publishes for you
+git_branch = "main"
+
+[engine]
+# How many new articles to attempt per daily run (1 is plenty for SEO).
+articles_per_run = 1
+# When the curated keyword queue is exhausted, the engine will (with LLM on)
+# mint new long-tail keywords from the seed themes below.
+seed_themes = [
+  "pet camera", "dog gps tracker", "cat gps tracker", "automatic pet feeder",
+  "smart litter box", "pet water fountain", "pet door", "pet health monitor",
+  "training collar", "pet camera treat dispenser", "pet thermostat", "pet air purifier"
+]
