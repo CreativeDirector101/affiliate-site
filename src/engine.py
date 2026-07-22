@@ -56,7 +56,7 @@ def load_state():
     return {"published": [], "queue_index": 0, "history": []}
 
 def save_state(state):
-    STATE_PATH.write_text(json.dumps(state, indent=2))
+    STATE_PATH.write_text(json.dumps(state, indent=2), encoding="utf-8")
 
 # ---------------------------------------------------------------- helpers
 def aff_link(cfg, query):
@@ -231,15 +231,15 @@ def build(cfg, articles):
     published = [a for a in articles if a["slug"] in load_state().get("published", [])]
     # include all known articles for index/sitemap
     all_arts = articles
-    (PUBLIC / "index.html").write_text(render_index(cfg, all_arts))
+    (PUBLIC / "index.html").write_text(render_index(cfg, all_arts), encoding="utf-8")
     for a in all_arts:
-        (PUBLIC / f"{a['slug']}.html").write_text(render_article(cfg, a))
-    (PUBLIC / "sitemap.xml").write_text(render_sitemap(cfg, all_arts))
-    (PUBLIC / "feed.xml").write_text(render_feed(cfg, all_arts))
+        (PUBLIC / f"{a['slug']}.html").write_text(render_article(cfg, a), encoding="utf-8")
+    (PUBLIC / "sitemap.xml").write_text(render_sitemap(cfg, all_arts), encoding="utf-8")
+    (PUBLIC / "feed.xml").write_text(render_feed(cfg, all_arts), encoding="utf-8")
     (PUBLIC / "robots.txt").write_text("User-agent: *\nAllow: /\nSitemap: " +
         get(cfg, "site", "base_url", default="https://example.com").rstrip("/") + "/sitemap.xml\n")
     # GitHub Pages needs this to serve from project root
-    (PUBLIC / ".nojekyll").write_text("")
+    (PUBLIC / ".nojekyll").write_text("", encoding="utf-8")
     n_pub = len(set(a["slug"] for a in all_arts))
     return n_pub
 
