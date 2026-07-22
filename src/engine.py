@@ -120,6 +120,25 @@ ul.index a:hover{color:var(--accent)}
 footer{padding:20px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--border)}
 """
 
+def analytics_tag(cfg):
+    """Return analytics <script> snippet, or '' if not configured.
+    Supports Plausible (plausible.io) or Cloudflare Web Analytics.
+    Privacy-friendly (no cookies), safe for a static affiliate site."""
+    prov = get(cfg, "analytics", "provider", default="").lower().strip()
+    if prov == "plausible":
+        pid = get(cfg, "analytics", "plausible_domain", default="")
+        if not pid:
+            return ""
+        return (f'<script defer data-domain="{esc(pid)}" '
+                f'src="https://plausible.io/js/script.js"></script>')
+    if prov == "cloudflare":
+        tid = get(cfg, "analytics", "cloudflare_token", default="")
+        if not tid:
+            return ""
+        return (f'<script defer src="https://static.cloudflareinsights.com/'
+                f'beacon.min.js" data-cf-beacon=\'{{"token": "{esc(tid)}"}}\'></script>')
+    return ""
+
 def render_article(cfg, art):
     title = esc(art["title"]); meta = esc(art.get("meta", "")); intro = esc(art.get("intro", ""))
     site_title = esc(get(cfg, "site", "title", default="Affiliate Site"))
@@ -154,6 +173,7 @@ def render_article(cfg, art):
 <meta name="description" content="{meta}">
 <link rel="canonical" href="{base}/{art['slug']}.html">
 <style>{CSS}</style>
+{analytics_tag(cfg)}
 </head>
 <body>
 <header><a class="brand" href="index.html">{site_title}</a></header>
@@ -189,6 +209,7 @@ def render_index(cfg, articles):
 <meta name="description" content="{desc}">
 <link rel="alternate" type="application/rss+xml" title="{site_title}" href="feed.xml">
 <style>{CSS}</style>
+{analytics_tag(cfg)}
 </head>
 <body>
 <header><span class="brand">{site_title}</span></header>
