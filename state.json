@@ -1,22 +1,19 @@
 {
   "published": [
-    "automatic-cat-feeder-wet-food",
-    "best-training-collar-vibration-only",
     "best-pet-water-fountain-plastic-free",
-    "automatic-dog-feeder-large-breed",
-    "best-gps-dog-tracker",
-    "best-wifi-pet-camera-no-subscription",
     "automatic-pet-feeder-wet-and-dry",
-    "best-pet-camera-2k",
-    "cat-water-fountain-stainless-3l",
-    "automatic-dog-ball-launcher",
-    "best-pet-camera-2026",
-    "best-pet-camera",
-    "dog-activity-monitor-for-weight-loss",
-    "dog-camera-treat-dispenser-outdoor",
+    "automatic-cat-feeder-review",
     "best-pet-door-for-wall",
     "cheap-pet-camera-under-30",
-    "automatic-cat-feeder-review"
+    "best-training-collar-vibration-only",
+    "best-pet-camera-2k",
+    "automatic-cat-feeder-wet-food",
+    "cat-water-fountain-stainless-3l",
+    "best-gps-dog-tracker",
+    "best-pet-camera-2026",
+    "automatic-dog-ball-launcher",
+    "automatic-dog-feeder-large-breed",
+    "best-wifi-pet-camera-no-subscription"
   ],
   "queue_index": 0,
   "history": [
@@ -99,24 +96,6 @@
     {
       "slug": "cheap-pet-camera-under-30",
       "keyword": "best pet camera under 30 dollars",
-      "date": "2026-07-22",
-      "source": "seed"
-    },
-    {
-      "slug": "best-pet-camera",
-      "keyword": "best pet camera",
-      "date": "2026-07-22",
-      "source": "ai"
-    },
-    {
-      "slug": "dog-activity-monitor-for-weight-loss",
-      "keyword": "dog activity monitor for weight loss",
-      "date": "2026-07-22",
-      "source": "seed"
-    },
-    {
-      "slug": "dog-camera-treat-dispenser-outdoor",
-      "keyword": "outdoor pet camera treat dispenser weatherproof",
       "date": "2026-07-22",
       "source": "seed"
     }
