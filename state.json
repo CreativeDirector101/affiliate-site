@@ -1,13 +1,16 @@
 {
   "published": [
-    "automatic-cat-feeder-wet-food",
-    "automatic-dog-ball-launcher",
-    "best-gps-dog-tracker",
-    "automatic-cat-feeder-review",
-    "automatic-dog-feeder-large-breed",
-    "best-pet-camera-2k",
     "best-pet-camera-2026",
-    "automatic-pet-feeder-wet-and-dry"
+    "best-pet-camera-2k",
+    "best-pet-door-for-wall",
+    "automatic-cat-feeder-wet-food",
+    "best-gps-dog-tracker",
+    "automatic-pet-feeder-wet-and-dry",
+    "automatic-dog-ball-launcher",
+    "automatic-dog-feeder-large-breed",
+    "best-training-collar-vibration-only",
+    "best-pet-water-fountain-plastic-free",
+    "automatic-cat-feeder-review"
   ],
   "queue_index": 0,
   "history": [
@@ -54,6 +57,24 @@
     {
       "slug": "best-pet-camera-2k",
       "keyword": "best 2k pet camera for detail",
+      "date": "2026-07-22",
+      "source": "seed"
+    },
+    {
+      "slug": "best-pet-door-for-wall",
+      "keyword": "best pet door for wall installation",
+      "date": "2026-07-22",
+      "source": "seed"
+    },
+    {
+      "slug": "best-pet-water-fountain-plastic-free",
+      "keyword": "best plastic free pet water fountain ceramic",
+      "date": "2026-07-22",
+      "source": "seed"
+    },
+    {
+      "slug": "best-training-collar-vibration-only",
+      "keyword": "best vibration only dog training collar no shock",
       "date": "2026-07-22",
       "source": "seed"
     }
