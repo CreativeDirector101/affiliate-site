@@ -26,6 +26,7 @@ import html
 import subprocess
 import urllib.request
 import urllib.error
+import urllib.parse
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -285,10 +286,10 @@ def ping_indexnow(cfg, urls):
     if not urls:
         return
     key = _indexnow_key()
-    host = get(cfg, "site", "base_url", default="").rstrip("/")
-    if "://" in host:
-        host = host.split("://", 1)[1]
-    else:
+    raw = get(cfg, "site", "base_url", default="").rstrip("/")
+    parsed = urllib.parse.urlparse(raw)
+    host = parsed.netloc or raw.replace("https://", "").replace("http://", "")
+    if not host:
         return
     payload = json.dumps({
         "host": host,

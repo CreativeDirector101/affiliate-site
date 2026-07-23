@@ -1,31 +1,31 @@
 {
   "published": [
+    "automatic-cat-feeder-wet-food",
+    "best-pet-water-fountain-plastic-free",
+    "cheap-pet-camera-under-30",
+    "pet-air-purifier-for-litter-box-odor",
+    "pet-camera-with-sd-card",
+    "pet-camera-night-vision-comparison",
     "best-pet-camera",
     "dog-gps-tracker-for-hiking",
-    "automatic-cat-feeder-review",
-    "best-pet-water-fountain-plastic-free",
-    "pet-air-purifier-for-litter-box-odor",
-    "pet-camera-treat-dispenser-buyers-guide",
-    "automatic-pet-feeder-wet-and-dry",
-    "automatic-cat-feeder-wet-food",
-    "cheap-pet-camera-under-30",
-    "cat-water-fountain-stainless-3l",
-    "best-pet-camera-2026",
-    "pet-camera-for-multiple-cats",
-    "best-wifi-pet-camera-no-subscription",
-    "pet-camera-with-sd-card",
-    "pet-door-for-sliding-glass-door",
-    "best-pet-camera-2k",
-    "pet-baby-monitor-alternative",
-    "automatic-dog-feeder-large-breed",
     "best-pet-door-for-wall",
-    "pet-camera-night-vision-comparison",
-    "best-gps-dog-tracker",
-    "pet-camera-with-privacy-shutter",
+    "pet-door-for-sliding-glass-door",
+    "automatic-pet-feeder-wet-and-dry",
     "dog-camera-treat-dispenser-outdoor",
     "best-training-collar-vibration-only",
+    "pet-baby-monitor-alternative",
+    "automatic-cat-feeder-review",
+    "best-wifi-pet-camera-no-subscription",
+    "best-pet-camera-2k",
+    "best-pet-camera-2026",
+    "automatic-dog-ball-launcher",
     "dog-activity-monitor-for-weight-loss",
-    "automatic-dog-ball-launcher"
+    "automatic-dog-feeder-large-breed",
+    "pet-camera-treat-dispenser-buyers-guide",
+    "best-gps-dog-tracker",
+    "pet-camera-for-multiple-cats",
+    "cat-water-fountain-stainless-3l",
+    "pet-camera-with-privacy-shutter"
   ],
   "queue_index": 0,
   "history": [
@@ -162,6 +162,24 @@
     {
       "slug": "pet-camera-treat-dispenser-buyers-guide",
       "keyword": "pet camera with treat dispenser buy guide",
+      "date": "2026-07-23",
+      "source": "seed"
+    },
+    {
+      "slug": "pet-camera-with-privacy-shutter",
+      "keyword": "pet camera with physical privacy shutter",
+      "date": "2026-07-23",
+      "source": "seed"
+    },
+    {
+      "slug": "pet-camera-with-sd-card",
+      "keyword": "pet camera with sd card local storage 128gb",
+      "date": "2026-07-23",
+      "source": "seed"
+    },
+    {
+      "slug": "pet-door-for-sliding-glass-door",
+      "keyword": "best pet door for sliding glass door",
       "date": "2026-07-23",
       "source": "seed"
     },
