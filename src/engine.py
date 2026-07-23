@@ -328,6 +328,11 @@ def build(cfg, articles):
         encoding="utf-8")
     (PUBLIC / ".nojekyll").write_text("", encoding="utf-8")
     ensure_indexnow_key_file(cfg)  # serve IndexNow key at /<key>.txt for validation
+    # Google Search Console site-verification file (served at site root).
+    # Safe to commit publicly — it only proves domain ownership to Google.
+    gsc = get(cfg, "site", "gsc_verification_file", default="")
+    if gsc:
+        (PUBLIC / gsc).write_text(f"google-site-verification: {gsc}", encoding="utf-8")
     return len(articles)
 
 # ---------------------------------------------------------------- LLM hook
