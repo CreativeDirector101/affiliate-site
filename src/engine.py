@@ -299,7 +299,6 @@ def ping_indexnow(cfg, urls):
     endpoints = [
         "https://api.indexnow.org/indexnow",
         "https://www.bing.com/indexnow",
-        "https://search.seznam.cz/indexnow",
     ]
     for ep in endpoints:
         try:

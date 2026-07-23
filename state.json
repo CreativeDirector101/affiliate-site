@@ -1,25 +1,28 @@
 {
   "published": [
+    "best-gps-dog-tracker",
+    "cheap-pet-camera-under-30",
+    "automatic-dog-feeder-large-breed",
+    "pet-camera-for-multiple-cats",
+    "best-pet-camera-2k",
+    "pet-camera-treat-dispenser-buyers-guide",
+    "automatic-cat-feeder-wet-food",
     "best-training-collar-vibration-only",
     "automatic-cat-feeder-review",
+    "cat-water-fountain-stainless-3l",
+    "automatic-dog-ball-launcher",
     "best-wifi-pet-camera-no-subscription",
-    "automatic-pet-feeder-wet-and-dry",
-    "automatic-cat-feeder-wet-food",
-    "best-gps-dog-tracker",
-    "dog-gps-tracker-for-hiking",
     "best-pet-camera",
+    "dog-camera-treat-dispenser-outdoor",
+    "dog-gps-tracker-for-hiking",
+    "automatic-pet-feeder-wet-and-dry",
+    "pet-air-purifier-for-litter-box-odor",
+    "pet-camera-night-vision-comparison",
+    "best-pet-camera-2026",
+    "best-pet-door-for-wall",
     "dog-activity-monitor-for-weight-loss",
     "pet-baby-monitor-alternative",
-    "best-pet-door-for-wall",
-    "cheap-pet-camera-under-30",
-    "pet-air-purifier-for-litter-box-odor",
-    "best-pet-camera-2k",
-    "best-pet-water-fountain-plastic-free",
-    "automatic-dog-ball-launcher",
-    "dog-camera-treat-dispenser-outdoor",
-    "automatic-dog-feeder-large-breed",
-    "best-pet-camera-2026",
-    "cat-water-fountain-stainless-3l"
+    "best-pet-water-fountain-plastic-free"
   ],
   "queue_index": 0,
   "history": [
@@ -138,6 +141,24 @@
     {
       "slug": "pet-baby-monitor-alternative",
       "keyword": "use baby monitor as pet camera",
+      "date": "2026-07-23",
+      "source": "seed"
+    },
+    {
+      "slug": "pet-camera-for-multiple-cats",
+      "keyword": "best pet camera for multiple cats",
+      "date": "2026-07-23",
+      "source": "seed"
+    },
+    {
+      "slug": "pet-camera-night-vision-comparison",
+      "keyword": "pet camera night vision infrared vs color",
+      "date": "2026-07-23",
+      "source": "seed"
+    },
+    {
+      "slug": "pet-camera-treat-dispenser-buyers-guide",
+      "keyword": "pet camera with treat dispenser buy guide",
       "date": "2026-07-23",
       "source": "seed"
     }
