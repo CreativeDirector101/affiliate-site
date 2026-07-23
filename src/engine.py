@@ -24,6 +24,8 @@ import sys
 import json
 import html
 import subprocess
+import urllib.request
+import urllib.error
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -255,6 +257,63 @@ def render_feed(cfg, articles):
 </channel>
 </rss>"""
 
+# ---------------------------------------------------------------- IndexNow
+# Free, instant, ban-safe discovery: tells search engines (Bing/Yandex/Naver,
+# and Google via the Indexing API proxy) that new URLs exist so they index
+# within HOURS instead of weeks. No account/ToS risk. Runs automatically on
+# every publish. See https://www.indexnow.org/
+import secrets as _secrets
+def _indexnow_key():
+    """Deterministic per-site key file (no external account needed).
+    We generate it once and serve it at /<key>.txt ; the engine writes that
+    file into public/ during build so the search engine can validate it."""
+    key_file = ROOT / ".indexnow_key"
+    if not key_file.exists():
+        # 32-hex char key (IndexNow spec)
+        key_file.write_text(_secrets.token_hex(16), encoding="utf-8")
+    return key_file.read_text(encoding="utf-8").strip()
+
+def ensure_indexnow_key_file(cfg):
+    """Write the key verification file into public/ so IndexNow validates."""
+    key = _indexnow_key()
+    (PUBLIC / f"{key}.txt").write_text(key, encoding="utf-8")
+    return key
+
+def ping_indexnow(cfg, urls):
+    """Ping search engines with newly published URLs. Best-effort; never
+    raises (a network blip must not break publishing)."""
+    if not urls:
+        return
+    key = _indexnow_key()
+    host = get(cfg, "site", "base_url", default="").rstrip("/")
+    if "://" in host:
+        host = host.split("://", 1)[1]
+    else:
+        return
+    payload = json.dumps({
+        "host": host,
+        "key": key,
+        "urlList": urls,
+        "keyLocation": f"https://{host}/{key}.txt",
+    }).encode("utf-8")
+    endpoints = [
+        "https://api.indexnow.org/indexnow",
+        "https://www.bing.com/indexnow",
+        "https://search.seznam.cz/indexnow",
+    ]
+    for ep in endpoints:
+        try:
+            req = urllib.request.Request(
+                ep, data=payload, method="POST",
+                headers={"Content-Type": "application/json; charset=utf-8"})
+            with urllib.request.urlopen(req, timeout=15) as r:
+                code = r.getcode()
+            print(f"[indexnow] {ep.split('/')[2]}: {code}")
+        except urllib.error.HTTPError as e:
+            print(f"[indexnow] {ep.split('/')[2]}: HTTP {e.code}")
+        except Exception as e:
+            print(f"[indexnow] {ep.split('/')[2]}: {e}")
+
 # ---------------------------------------------------------------- build
 def build(cfg, articles):
     PUBLIC.mkdir(exist_ok=True)
@@ -268,6 +327,7 @@ def build(cfg, articles):
         get(cfg, "site", "base_url", default="https://example.com").rstrip("/") + "/sitemap.xml\n",
         encoding="utf-8")
     (PUBLIC / ".nojekyll").write_text("", encoding="utf-8")
+    ensure_indexnow_key_file(cfg)  # serve IndexNow key at /<key>.txt for validation
     return len(articles)
 
 # ---------------------------------------------------------------- LLM hook
@@ -314,6 +374,10 @@ def run(cfg):
     save_state(state)
     n = build(cfg, articles)
     _git_commit_push(cfg, batch)
+    # Instant, ban-safe discovery: ping search engines with the NEW urls only.
+    base = get(cfg, "site", "base_url", default="").rstrip("/")
+    new_urls = [f"{base}/{a['slug']}.html" for a in batch]
+    ping_indexnow(cfg, new_urls)
     print(f"[ok] published {len(batch)} article(s): " +
           ", ".join(a['keyword'] for a in batch) +
           f" | total: {n} | remaining: {len(queue)-len(batch)}")

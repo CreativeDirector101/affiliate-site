@@ -1,22 +1,25 @@
 {
   "published": [
-    "cheap-pet-camera-under-30",
-    "automatic-pet-feeder-wet-and-dry",
-    "cat-water-fountain-stainless-3l",
     "best-training-collar-vibration-only",
-    "best-pet-camera-2k",
-    "best-pet-camera-2026",
-    "best-gps-dog-tracker",
-    "automatic-dog-ball-launcher",
-    "automatic-dog-feeder-large-breed",
-    "dog-activity-monitor-for-weight-loss",
-    "best-pet-camera",
-    "best-pet-water-fountain-plastic-free",
-    "automatic-cat-feeder-wet-food",
-    "best-wifi-pet-camera-no-subscription",
     "automatic-cat-feeder-review",
+    "best-wifi-pet-camera-no-subscription",
+    "automatic-pet-feeder-wet-and-dry",
+    "automatic-cat-feeder-wet-food",
+    "best-gps-dog-tracker",
+    "dog-gps-tracker-for-hiking",
+    "best-pet-camera",
+    "dog-activity-monitor-for-weight-loss",
+    "pet-baby-monitor-alternative",
+    "best-pet-door-for-wall",
+    "cheap-pet-camera-under-30",
+    "pet-air-purifier-for-litter-box-odor",
+    "best-pet-camera-2k",
+    "best-pet-water-fountain-plastic-free",
+    "automatic-dog-ball-launcher",
     "dog-camera-treat-dispenser-outdoor",
-    "best-pet-door-for-wall"
+    "automatic-dog-feeder-large-breed",
+    "best-pet-camera-2026",
+    "cat-water-fountain-stainless-3l"
   ],
   "queue_index": 0,
   "history": [
@@ -117,6 +120,24 @@
     {
       "slug": "dog-camera-treat-dispenser-outdoor",
       "keyword": "outdoor pet camera treat dispenser weatherproof",
+      "date": "2026-07-23",
+      "source": "seed"
+    },
+    {
+      "slug": "dog-gps-tracker-for-hiking",
+      "keyword": "best dog gps tracker for hiking off leash",
+      "date": "2026-07-23",
+      "source": "seed"
+    },
+    {
+      "slug": "pet-air-purifier-for-litter-box-odor",
+      "keyword": "best air purifier for litter box odor",
+      "date": "2026-07-23",
+      "source": "seed"
+    },
+    {
+      "slug": "pet-baby-monitor-alternative",
+      "keyword": "use baby monitor as pet camera",
       "date": "2026-07-23",
       "source": "seed"
     }
